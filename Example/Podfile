@@ -25,7 +25,7 @@ target 'WindmillSample' do
   
   # Pods for WindmillSample
   commonPods
-  pod 'WindmillAd-iOS', '1.4.2', :subspecs => [   #Mintegral
+  pod 'WindmillAd-iOS', '1.4.3', :subspecs => [   #Mintegral
       'TouTiaoAdapter',
       'AdmobAdapter',
       'AppLovinAdapter',
