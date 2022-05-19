@@ -32,11 +32,8 @@
     XLFormSectionDescriptor *section;
     XLFormRowDescriptor *row;
     //********************************************************************************
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"Dropdown"];
+    section = [self dropdownSection:[WindHelper getSplashAdDropdownDatasource]];
     [form addFormSection:section];
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kDropdownListView rowType:XLFormRowDescriptorTypeDropdown title:@"请选择广告网络"];
-    row.selectorOptions = [WindHelper getSplashAdDropdownDatasource];
-    [section addFormRow:row];
     
     //********************************************************************************
     section = [XLFormSectionDescriptor formSection];
@@ -66,26 +63,12 @@
     [section addFormRow:row];
     
     //********************************************************************************
-    section = [WindHelper getCallbackRows:[self getCallbackTitles]];
+    section = [WindHelper getSplashCallbackRows];
     [form addFormSection:section];
 
     self.form = form;
 }
 
-- (NSArray *)getCallbackTitles {
-    return @[
-        @{@"tag":kAdDidLoad, @"title":@"onSplashAdDidLoad:"},
-        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"onSplashAdLoadFail:error:"},
-        @{@"tag":kAdDidVisible, @"title":@"onSplashAdSuccessPresentScreen:"},
-        @{@"tag":kAdDidRenderError, @"title":@"onSplashAdFailToPresent:withError:"},
-        @{@"tag":kAdDidClick, @"title":@"onSplashAdClicked:"},
-        @{@"tag":kAdDidSkip, @"title":@"onSplashAdSkiped:"},
-        @{@"tag":kAdWillClose, @"title":@"onSplashAdWillClosed:"},
-        @{@"tag":kAdDidClose, @"title":@"onSplashAdClosed:"},
-        @{@"tag":kZoomOutViewDidClick, @"title":@"onSplashZoomOutViewAdDidClick:"},
-        @{@"tag":kZoomOutViewDidClose, @"title":@"onSplashZoomOutViewAdDidClose:"},
-    ];
-}
 
 - (BOOL)hasLogo {
     XLFormRowDescriptor *row = [self.form formRowWithTag:@"klogo"];
@@ -94,7 +77,7 @@
 
 #pragma mark -Actions
 - (void)loadAdAndShow:(XLFormRowDescriptor *)row {
-    [self clearRowState:[self getCallbackTitles]];
+    [self clearRowState:[WindHelper getSplashCallbackDatasources]];
     if (!self.splashAd) {
         WindMillAdRequest *request = [WindMillAdRequest request];
         request.placementId = [self getSelectPlacementId];
@@ -110,7 +93,7 @@
     }
 }
 - (void)loadAd:(XLFormRowDescriptor *)row {
-    [self clearRowState:[self getCallbackTitles]];
+    [self clearRowState:[WindHelper getSplashCallbackDatasources]];
     CGFloat logoHeight = 0;
     if ([self hasLogo]) {
         logoHeight = 150;

@@ -30,6 +30,8 @@
 		C75F01A927D9A08800F26DD9 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C75F01A827D9A08800F26DD9 /* libiconv.tbd */; };
 		C75F01AB27D9A08E00F26DD9 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C75F01AA27D9A08E00F26DD9 /* libc++.tbd */; };
 		C75F01AD27D9A09300F26DD9 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C75F01AC27D9A09300F26DD9 /* libbz2.tbd */; };
+		C77DF8D9282CF19100D9BB8A /* WindmillBannerAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77DF8D8282CF19100D9BB8A /* WindmillBannerAdViewController.m */; };
+		C77DF8DC282CF8E700D9BB8A /* XLFormIconButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C77DF8DB282CF8E700D9BB8A /* XLFormIconButtonCell.m */; };
 		C7CD051A276084B10015C417 /* XLFormInlineLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CD0519276084B10015C417 /* XLFormInlineLabelCell.m */; };
 		C7CD05AA2761D3840015C417 /* XLFormBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CD05A92761D3840015C417 /* XLFormBaseViewController.m */; };
 		C7CD05AD2761ECD40015C417 /* XLFormSliderValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CD05AC2761ECD40015C417 /* XLFormSliderValueCell.m */; };
@@ -107,6 +109,10 @@
 		C75F01A827D9A08800F26DD9 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		C75F01AA27D9A08E00F26DD9 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		C75F01AC27D9A09300F26DD9 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		C77DF8D7282CF19100D9BB8A /* WindmillBannerAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindmillBannerAdViewController.h; sourceTree = "<group>"; };
+		C77DF8D8282CF19100D9BB8A /* WindmillBannerAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindmillBannerAdViewController.m; sourceTree = "<group>"; };
+		C77DF8DA282CF8E700D9BB8A /* XLFormIconButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormIconButtonCell.h; sourceTree = "<group>"; };
+		C77DF8DB282CF8E700D9BB8A /* XLFormIconButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFormIconButtonCell.m; sourceTree = "<group>"; };
 		C7CD0518276084B10015C417 /* XLFormInlineLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLFormInlineLabelCell.h; sourceTree = "<group>"; };
 		C7CD0519276084B10015C417 /* XLFormInlineLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLFormInlineLabelCell.m; sourceTree = "<group>"; };
 		C7CD051B2760900A0015C417 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -313,6 +319,8 @@
 				C7D8C2F9275F8F7600719BFD /* XLFormDropdownCell.h */,
 				C7D8C2FA275F8F7600719BFD /* XLFormDropdownCell.m */,
 				C7D8C2FB275F8F7600719BFD /* XLFormDropdownCell.xib */,
+				C77DF8DA282CF8E700D9BB8A /* XLFormIconButtonCell.h */,
+				C77DF8DB282CF8E700D9BB8A /* XLFormIconButtonCell.m */,
 				C7CD0518276084B10015C417 /* XLFormInlineLabelCell.h */,
 				C7CD0519276084B10015C417 /* XLFormInlineLabelCell.m */,
 			);
@@ -323,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				C734583727D9D0F30091C25C /* SplashAd */,
+				C77DF8D6282CF16E00D9BB8A /* BannerAd */,
 				C734583927D9D1010091C25C /* IntersititialAd */,
 				C734583827D9D0F90091C25C /* RewardVideoAd */,
 				C734583A27D9D1080091C25C /* NativeAd */,
@@ -340,6 +349,15 @@
 				C73602B5275E0A1800B7B2C9 /* WindmillDropdownListView.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C77DF8D6282CF16E00D9BB8A /* BannerAd */ = {
+			isa = PBXGroup;
+			children = (
+				C77DF8D7282CF19100D9BB8A /* WindmillBannerAdViewController.h */,
+				C77DF8D8282CF19100D9BB8A /* WindmillBannerAdViewController.m */,
+			);
+			path = BannerAd;
 			sourceTree = "<group>";
 		};
 		C7CD05C2276212830015C417 /* NativeCells */ = {
@@ -546,11 +564,13 @@
 				C73602B7275E0A1800B7B2C9 /* WindmillDropdownListView.m in Sources */,
 				C7CD05DA2762131B0015C417 /* WindFeedNormalTableViewCell.m in Sources */,
 				C7CD05D3276212980015C417 /* WindMillFeedAdBaseTableViewCell.m in Sources */,
+				C77DF8DC282CF8E700D9BB8A /* XLFormIconButtonCell.m in Sources */,
 				C7CD05CF276212980015C417 /* WindMillFeedAdLeftTableViewCell.m in Sources */,
 				C7D8C2F5275F601500719BFD /* WindHelper.m in Sources */,
 				C7CD05AD2761ECD40015C417 /* XLFormSliderValueCell.m in Sources */,
 				C7CD051A276084B10015C417 /* XLFormInlineLabelCell.m in Sources */,
 				C7CD05D2276212980015C417 /* WindMillFeedVideoTableViewCell.m in Sources */,
+				C77DF8D9282CF19100D9BB8A /* WindmillBannerAdViewController.m in Sources */,
 				C73602B0275E084700B7B2C9 /* WindmillToolViewController.m in Sources */,
 				C73602A7275E080900B7B2C9 /* WindmillSplashAdViewController.m in Sources */,
 				C7D8C2F1275F591500719BFD /* ChannelItem.m in Sources */,

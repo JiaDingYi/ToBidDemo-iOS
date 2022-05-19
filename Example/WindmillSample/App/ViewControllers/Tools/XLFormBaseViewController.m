@@ -7,6 +7,7 @@
 
 #import "XLFormBaseViewController.h"
 #import "WindmillDropdownListView.h"
+#import "XLFormDropdownCell.h"
 
 
 @interface XLFormBaseViewController ()
@@ -45,6 +46,14 @@
         row.disabled = @YES;
         [self updateFormRow:row];
     }
+}
+
+- (XLFormSectionDescriptor *)dropdownSection:(NSArray *)dataSource {
+    XLFormSectionDescriptor *section = [XLFormSectionDescriptor formSectionWithTitle:@"Dropdown"];
+    XLFormRowDescriptor *row = [XLFormRowDescriptor formRowDescriptorWithTag:kDropdownListView rowType:XLFormRowDescriptorTypeDropdown title:@"请选择广告网络"];
+    row.selectorOptions = dataSource;
+    [section addFormRow:row];
+    return section;
 }
 
 

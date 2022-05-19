@@ -20,8 +20,8 @@
     [self initLogService];
     [self initTableApparance];
     
-    WindMillOption *option = [[WindMillOption alloc] initWithAppId:@"16990" appKey:nil];
-    [WindMillAds initSDK:option];
+    //初始化SDK
+    [WindMillAds setupSDKWithAppId:@"16990"];
     
     return YES;
 }

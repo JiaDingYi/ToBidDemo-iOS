@@ -43,12 +43,9 @@ static NSString *const kSliderHeight = @"slider-H";
     XLFormSectionDescriptor *section;
     XLFormRowDescriptor *row;
     //********************************************************************************
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"Dropdown"];
-    [form addFormSection:section];
-    
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kDropdownListView rowType:XLFormRowDescriptorTypeDropdown title:@"请选择广告网络"];
-    row.selectorOptions = [WindHelper getNativeAdDropdownDatasource];
+    section = [self dropdownSection:[WindHelper getNativeAdDropdownDatasource]];
     [section addFormRow:row];
+    
     //********************************************************************************
     section = [XLFormSectionDescriptor formSectionWithTitle:@"设置广告位宽高"];
     section.footerTitle = @"高度设置为0，表示根据宽度自适应高度(仅针对模版渲染)";
@@ -78,29 +75,14 @@ static NSString *const kSliderHeight = @"slider-H";
     [section addFormRow:row];
     
     //********************************************************************************
-    section = [WindHelper getCallbackRows:[self getCallbackTitles]];
+    section = [WindHelper getNativeCallbackRows];
     [form addFormSection:section];
 
     self.form = form;
 }
 
-- (NSArray *)getCallbackTitles {
-    return @[
-        @{@"tag":kAdDidLoad, @"title":@"nativeAdsManagerSuccessToLoad:"},
-        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"nativeAdsManager:didFailWithError:"},
-        @{@"tag":kAdDidRenderSuccess, @"title":@"nativeExpressAdViewRenderSuccess:"},
-        @{@"tag":kAdDidRenderError, @"title":@"nativeExpressAdViewRenderFail:error:"},
-        @{@"tag":kAdWillVisible, @"title":@"nativeAdViewWillExpose:"},
-        @{@"tag":kAdDidClick, @"title":@"nativeAdViewDidClick:"},
-        @{@"tag":kAdDetailViewVisible, @"title":@"nativeAdDetailViewWillPresentScreen:"},
-        @{@"tag":kAdDetailViewClose, @"title":@"nativeAdDetailViewClosed:"},
-        @{@"tag":kAdDidPlayStateChange, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"nativeAdView:playerStatusChanged:userInfo:"},
-        @{@"tag":kAdDislike, @"title":@"nativeAdView:dislikeWithReason:"},
-    ];
-}
-
 - (void)showAdNormal:(XLFormRowDescriptor *)row {
-    [self clearRowState:[self getCallbackTitles]];
+    [self clearRowState:[WindHelper getNativeCallbackDatasources]];
     if (!self.nativeAdsManager) {
         WindMillAdRequest *request = [WindMillAdRequest request];
         request.placementId = [self getSelectPlacementId];
@@ -113,7 +95,7 @@ static NSString *const kSliderHeight = @"slider-H";
     [self.nativeAdsManager loadAdDataWithCount:1];
 }
 - (void)showAdTableView:(XLFormRowDescriptor *)row {
-    [self clearRowState:[self getCallbackTitles]];
+    [self clearRowState:[WindHelper getNativeCallbackDatasources]];
     WindmillNativeTableViewController *vc = [[WindmillNativeTableViewController alloc] init];
     vc.width = self.width;
     vc.height = self.height;

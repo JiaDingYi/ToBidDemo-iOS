@@ -27,7 +27,7 @@
 
 
 - (void)loadAd:(XLFormRowDescriptor *)row {
-    [self clearRowState:[self getCallbackTitles]];
+    [self clearRowState:[WindHelper getRewardVideoCallbackDatasources]];
     WindMillAdRequest *request = [WindMillAdRequest request];
     request.userId = @"your user id";
     request.placementId = [self getSelectPlacementId];
@@ -56,12 +56,8 @@
     XLFormSectionDescriptor *section;
     XLFormRowDescriptor *row;
     //********************************************************************************
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"Dropdown"];
+    section = [self dropdownSection:[WindHelper getRewardAdDropdownDatasource]];
     [form addFormSection:section];
-    
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kDropdownListView rowType:XLFormRowDescriptorTypeDropdown title:@"请选择广告网络"];
-    row.selectorOptions = [WindHelper getRewardAdDropdownDatasource];
-    [section addFormRow:row];
     
     section = [XLFormSectionDescriptor formSection];
     section.title = @"广告示例";
@@ -74,25 +70,12 @@
     [section addFormRow:row];
     
     // Section
-    section = [WindHelper getCallbackRows:[self getCallbackTitles]];
+    section = [WindHelper getRewardVideoCallbackRows];
     [form addFormSection:section];
 
     self.form = form;
 }
 
-- (NSArray *)getCallbackTitles {
-    return @[
-        @{@"tag":kAdDidLoad, @"title":@"rewardVideoAdDidLoad:"},
-        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"rewardVideoAdDidLoad:didFailWithError:"},
-        @{@"tag":kAdWillVisible, @"title":@"rewardVideoAdWillVisible:"},
-        @{@"tag":kAdDidVisible, @"title":@"rewardVideoAdDidVisible:"},
-        @{@"tag":kAdDidClick, @"title":@"rewardVideoAdDidClick:"},
-        @{@"tag":kAdDidSkip, @"title":@"rewardVideoAdDidClickSkip:"},
-        @{@"tag":kAdDidReward, @"title":@"rewardVideoAd:reward:"},
-        @{@"tag":kAdDidPlayFinish, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"rewardVideoAdDidPlayFinish:didFailWithError:"},
-        @{@"tag":kAdDidClose, @"title":@"rewardVideoAdDidClose:"},
-    ];
-}
 
 #pragma mark - WindMillRewardVideoAdDelegate
 

@@ -11,6 +11,8 @@ static NSString * const kDropdownListView = @"kDropdownListView";
 
 @interface XLFormBaseViewController : XLFormViewController
 
+- (XLFormSectionDescriptor *)dropdownSection:(NSArray *)dataSource;
+
 - (NSString *)getSelectPlacementId;
 
 - (void)clearRowState:(NSArray *)datasource;

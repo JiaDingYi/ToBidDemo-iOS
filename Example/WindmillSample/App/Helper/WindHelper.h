@@ -24,10 +24,14 @@ static NSString * const kAdDidSkip = @"kAdDidSkip";
 static NSString * const kAdDidReward = @"kAdDidReward";
 static NSString * const kAdWillClose = @"kAdWillClose";
 static NSString * const kAdDidClose = @"kAdDidClose";
+static NSString * const kAdServerResponse = @"AdServerResponse";
 static NSString * const kAdDidPlayFinish = @"kAdDidPlayFinish";
 static NSString * const kAdDidPlayStateChange = @"kAdDidPlayStateChange";
 static NSString * const kZoomOutViewDidClick = @"kZoomOutViewDidClick";
 static NSString * const kZoomOutViewDidClose = @"kZoomOutViewDidClose";
+static NSString * const kAutoRefreshSuccess = @"kAutoRefreshSuccess";
+static NSString * const kAutoRefreshFailed = @"kAutoRefreshFailed";
+static NSString * const kWillLeaveApplication = @"kWillLeaveApplication";
 
 @interface WindHelper : NSObject
 
@@ -35,8 +39,22 @@ static NSString * const kZoomOutViewDidClose = @"kZoomOutViewDidClose";
 + (NSArray *)getIntersititialAdDropdownDatasource;
 + (NSArray *)getIntersititialAdHalfDropdownDatasource;
 + (NSArray *)getSplashAdDropdownDatasource;
++ (NSArray *)getBannerAdDropdownDatasource;
 + (NSArray *)getNativeAdDropdownDatasource;
+/////////////////////////////////////////////////////////////////////////////
++ (NSArray *)getBannerCallbackDatasources;
++ (NSArray *)getSplashCallbackDatasources;
++ (NSArray *)getIntersititialCallbackDatasources;
++ (NSArray *)getRewardVideoCallbackDatasources;
++ (NSArray *)getNativeCallbackDatasources;
+/////////////////////////////////////////////////////////////////////////////
++ (XLFormSectionDescriptor *)getBannerCallbackRows;
++ (XLFormSectionDescriptor *)getSplashCallbackRows;
++ (XLFormSectionDescriptor *)getIntersititalCallbackRows;
++ (XLFormSectionDescriptor *)getRewardVideoCallbackRows;
++ (XLFormSectionDescriptor *)getNativeCallbackRows;
 
-+ (XLFormSectionDescriptor *)getCallbackRows:(NSArray *)datasource;
+
+
 
 @end

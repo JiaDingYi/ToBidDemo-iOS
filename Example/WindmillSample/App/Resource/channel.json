@@ -123,6 +123,32 @@
             "placementId":"8335696523490528"
         }
     ],
+    "banner_ad":[
+        {
+            "name":"穿山甲",
+            "placementId":"9828667573411889"
+        },
+        {
+            "name":"优量汇",
+            "placementId":"1651297928518439"
+        },
+        {
+            "name":"Mintegral",
+            "placementId":"3489762809157203"
+        },
+        {
+            "name":"百度",
+            "placementId":"5719362963294470"
+        },
+        {
+            "name":"Vungle",
+            "placementId":"9354374486641997"
+        },
+        {
+            "name":"UnityAds",
+            "placementId":"7556519713337932"
+        }
+    ],
     "native_ad":[
         {
             "name":"Sigmob",

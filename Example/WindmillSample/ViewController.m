@@ -12,6 +12,7 @@
 #import "WindmillIntersititialAdViewController.h"
 #import "WindmillNativeAdViewController.h"
 #import "WindmillSplashAdViewController.h"
+#import "WindmillBannerAdViewController.h"
 #import "WindmillChannelVersionViewController.h"
 #import "WindmillToolViewController.h"
 
@@ -42,6 +43,16 @@
     row.required = YES;
     [row.cellConfigAtConfigure setValue:[UIImage imageNamed:@"demo_normal"] forKey:@"image"];
     row.action.formSelector = @selector(splashAdAction:);
+    [section addFormRow:row];
+    
+    //********************************************************************************
+    section = [XLFormSectionDescriptor formSection];
+    [form addFormSection:section];
+    
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"BannerAd" rowType:XLFormRowDescriptorTypeLeftIconAndTitle title:@"横幅广告"];
+    row.required = YES;
+    [row.cellConfigAtConfigure setValue:[UIImage imageNamed:@"demo_normal"] forKey:@"image"];
+    row.action.formSelector = @selector(bannerAdAction:);
     [section addFormRow:row];
     
     //********************************************************************************
@@ -111,6 +122,10 @@
 #pragma mark -Actions
 - (void)splashAdAction:(XLFormRowDescriptor *)sender {
     WindmillSplashAdViewController *vc = [WindmillSplashAdViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)bannerAdAction:(XLFormRowDescriptor *)sender {
+    WindmillBannerAdViewController *vc = [WindmillBannerAdViewController new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)rewardVideoAdAction:(XLFormRowDescriptor *)sender {

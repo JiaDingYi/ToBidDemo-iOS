@@ -9,6 +9,7 @@
 #define PrefixHeader_pch
 
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import <ReactiveObjC/ReactiveObjC.h>
 #ifdef DEBUG
 static const int ddLogLevel = DDLogLevelDebug;
 #else

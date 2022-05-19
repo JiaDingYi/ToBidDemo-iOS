@@ -9,15 +9,124 @@
 #import <MJExtension/MJExtension.h>
 #import <XLForm/XLForm.h>
 #import "WindmillDropdownListView.h"
+#import "XLFormInlineLabelCell.h"
 
 static NSString * const Reward_Video_Ad = @"reward_ad";
 static NSString * const Intersititial_fullscreen_Ad = @"intersititial_fullscreen_ad";
 static NSString * const Intersititial_Ad = @"intersititial_ad";
 static NSString * const Splash_Ad = @"splash_ad";
+static NSString * const Banner_Ad = @"banner_ad";
 static NSString * const Native_Ad = @"native_ad";
 
 @implementation WindHelper
 
+
++ (NSArray *)getBannerCallbackDatasources {
+    return @[
+        @{@"tag":kAutoRefreshSuccess, @"title":@"bannerAdViewDidAutoRefresh:"},
+        @{@"tag":kAutoRefreshFailed, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"bannerView:failedToAutoRefreshWithError:"},
+        @{@"tag":kAdDidLoad, @"title":@"bannerAdViewLoadSuccess:"},
+        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"bannerAdViewFailedToLoad:error:"},
+        @{@"tag":kAdDidVisible, @"title":@"bannerAdViewWillExpose:"},
+        @{@"tag":kAdDidClick, @"title":@"bannerAdViewDidClicked:"},
+        @{@"tag":kWillLeaveApplication, @"title":@"bannerAdViewWillLeaveApplication:"},
+        @{@"tag":kAdDetailViewVisible, @"title":@"bannerAdViewWillOpenFullScreen:"},
+        @{@"tag":kAdDetailViewClose, @"title":@"bannerAdViewCloseFullScreen:"},
+        @{@"tag":kAdDidClose, @"title":@"bannerAdViewDidRemoved:"}
+    ];
+}
+
++ (NSArray *)getSplashCallbackDatasources {
+    return @[
+        @{@"tag":kAdDidLoad, @"title":@"onSplashAdDidLoad:"},
+        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"onSplashAdLoadFail:error:"},
+        @{@"tag":kAdDidVisible, @"title":@"onSplashAdSuccessPresentScreen:"},
+        @{@"tag":kAdDidRenderError, @"title":@"onSplashAdFailToPresent:withError:"},
+        @{@"tag":kAdDidClick, @"title":@"onSplashAdClicked:"},
+        @{@"tag":kAdDidSkip, @"title":@"onSplashAdSkiped:"},
+        @{@"tag":kAdWillClose, @"title":@"onSplashAdWillClosed:"},
+        @{@"tag":kAdDidClose, @"title":@"onSplashAdClosed:"},
+        @{@"tag":kZoomOutViewDidClick, @"title":@"onSplashZoomOutViewAdDidClick:"},
+        @{@"tag":kZoomOutViewDidClose, @"title":@"onSplashZoomOutViewAdDidClose:"},
+    ];
+}
+
++ (NSArray *)getIntersititialCallbackDatasources {
+    return @[
+        @{@"tag":kAdDidLoad, @"title":@"intersititialAdDidLoad:"},
+        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"intersititialAdDidLoad:didFailWithError:"},
+        @{@"tag":kAdDidVisible, @"title":@"intersititialAdDidVisible:"},
+        @{@"tag":kAdDidClick, @"title":@"intersititialAdDidClick:"},
+        @{@"tag":kAdDidSkip, @"title":@"intersititialAdDidClickSkip:"},
+        @{@"tag":kAdDidPlayFinish, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"intersititialAdDidPlayFinish:didFailWithError:"},
+        @{@"tag":kAdDidClose, @"title":@"intersititialAdDidClose:"},
+    ];
+}
+
++ (NSArray *)getRewardVideoCallbackDatasources {
+    return @[
+        @{@"tag":kAdDidLoad, @"title":@"rewardVideoAdDidLoad:"},
+        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"rewardVideoAdDidLoad:didFailWithError:"},
+        @{@"tag":kAdDidVisible, @"title":@"rewardVideoAdDidVisible:"},
+        @{@"tag":kAdDidClick, @"title":@"rewardVideoAdDidClick:"},
+        @{@"tag":kAdDidSkip, @"title":@"rewardVideoAdDidClickSkip:"},
+        @{@"tag":kAdDidReward, @"title":@"rewardVideoAd:reward:"},
+        @{@"tag":kAdDidPlayFinish, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"rewardVideoAdDidPlayFinish:didFailWithError:"},
+        @{@"tag":kAdDidClose, @"title":@"rewardVideoAdDidClose:"},
+    ];
+}
+
++ (NSArray *)getNativeCallbackDatasources {
+    return @[
+        @{@"tag":kAdDidLoad, @"title":@"nativeAdsManagerSuccessToLoad:"},
+        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"nativeAdsManager:didFailWithError:"},
+        @{@"tag":kAdDidRenderSuccess, @"title":@"nativeExpressAdViewRenderSuccess:"},
+        @{@"tag":kAdDidRenderError, @"title":@"nativeExpressAdViewRenderFail:error:"},
+        @{@"tag":kAdWillVisible, @"title":@"nativeAdViewWillExpose:"},
+        @{@"tag":kAdDidClick, @"title":@"nativeAdViewDidClick:"},
+        @{@"tag":kAdDetailViewVisible, @"title":@"nativeAdDetailViewWillPresentScreen:"},
+        @{@"tag":kAdDetailViewClose, @"title":@"nativeAdDetailViewClosed:"},
+        @{@"tag":kAdDidPlayStateChange, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"nativeAdView:playerStatusChanged:userInfo:"},
+        @{@"tag":kAdDislike, @"title":@"nativeAdView:dislikeWithReason:"},
+    ];
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+
++ (XLFormSectionDescriptor *)getSplashCallbackRows {
+    return [self getCallbackRows:[self getSplashCallbackDatasources]];
+}
++ (XLFormSectionDescriptor *)getBannerCallbackRows {
+    return [self getCallbackRows:[self getBannerCallbackDatasources]];
+}
++ (XLFormSectionDescriptor *)getIntersititalCallbackRows {
+    return [self getCallbackRows:[self getIntersititialCallbackDatasources]];
+}
++ (XLFormSectionDescriptor *)getRewardVideoCallbackRows {
+    return [self getCallbackRows:[self getRewardVideoCallbackDatasources]];
+}
++ (XLFormSectionDescriptor *)getNativeCallbackRows {
+    return [self getCallbackRows:[self getNativeCallbackDatasources]];
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
++ (XLFormSectionDescriptor *)getCallbackRows:(NSArray *)datasource {
+    XLFormSectionDescriptor *section = [XLFormSectionDescriptor formSectionWithTitle:@"Dropdown"];
+    section.title = @"广告回调信息";
+    for (NSDictionary *item in datasource) {
+        NSString *rowType = [item objectForKey:@"rowType"];
+        XLFormRowDescriptor *row = [XLFormRowDescriptor formRowDescriptorWithTag:item[@"tag"] rowType:rowType?rowType:XLFormRowDescriptorTypeInfo];
+        row.title = [item objectForKey:@"title"];
+        row.disabled = @YES;
+        [section addFormRow:row];
+    }
+    return section;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
 + (NSArray *)getRewardAdDropdownDatasource {
     return [self getDropdownDatasourceWithKey:Reward_Video_Ad];
 }
@@ -33,26 +142,16 @@ static NSString * const Native_Ad = @"native_ad";
 + (NSArray *)getSplashAdDropdownDatasource {
     return [self getDropdownDatasourceWithKey:Splash_Ad];
 }
++ (NSArray *)getBannerAdDropdownDatasource {
+    return [self getDropdownDatasourceWithKey:Banner_Ad];
+}
 
 + (NSArray *)getNativeAdDropdownDatasource {
     return [self getDropdownDatasourceWithKey:Native_Ad];
 }
 
-+ (XLFormSectionDescriptor *)getCallbackRows:(NSArray *)datasource {
-    XLFormSectionDescriptor *section = [XLFormSectionDescriptor formSectionWithTitle:@"Dropdown"];
-    section.title = @"广告回调信息";
-    for (NSDictionary *item in datasource) {
-        NSString *rowType = [item objectForKey:@"rowType"];
-        XLFormRowDescriptor *row = [XLFormRowDescriptor formRowDescriptorWithTag:item[@"tag"] rowType:rowType?rowType:XLFormRowDescriptorTypeInfo];
-        row.title = [item objectForKey:@"title"];
-        row.disabled = @YES;
-        [section addFormRow:row];
-    }
-    return section;
-}
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
 
 + (NSDictionary *)getChannelItems {
     static NSDictionary *item;
@@ -80,7 +179,5 @@ static NSString * const Native_Ad = @"native_ad";
     }
     return dataSource;
 }
-
-
 
 @end

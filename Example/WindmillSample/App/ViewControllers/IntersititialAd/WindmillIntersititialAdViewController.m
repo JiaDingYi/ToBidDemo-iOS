@@ -26,7 +26,7 @@
 }
 
 - (void)loadAd:(XLFormRowDescriptor *)row {
-    [self clearRowState:[self getCallbackTitles]];
+    [self clearRowState:[WindHelper getIntersititialCallbackDatasources]];
     WindMillAdRequest *request = [WindMillAdRequest request];
     request.userId = @"your user id";
     request.placementId = [self getSelectPlacementId];
@@ -56,12 +56,8 @@
     XLFormSectionDescriptor *section;
     XLFormRowDescriptor *row;
     //********************************************************************************
-    section = [XLFormSectionDescriptor formSectionWithTitle:@"Dropdown"];
+    section = [self dropdownSection:[WindHelper getIntersititialAdDropdownDatasource]];
     [form addFormSection:section];
-    
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:kDropdownListView rowType:XLFormRowDescriptorTypeDropdown title:@"请选择广告网络"];
-    row.selectorOptions = [WindHelper getIntersititialAdDropdownDatasource];
-    [section addFormRow:row];
     //********************************************************************************
     section = [XLFormSectionDescriptor formSection];
     [form addFormSection:section];
@@ -81,25 +77,11 @@
     [section addFormRow:row];
     
     // Section
-    section = [WindHelper getCallbackRows:[self getCallbackTitles]];
+    section = [WindHelper getIntersititalCallbackRows];
     [form addFormSection:section];
 
     self.form = form;
 }
-
-- (NSArray *)getCallbackTitles {
-    return @[
-        @{@"tag":kAdDidLoad, @"title":@"intersititialAdDidLoad:"},
-        @{@"tag":kAdDidLoadError, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"intersititialAdDidLoad:didFailWithError:"},
-        @{@"tag":kAdWillVisible, @"title":@"intersititialAdWillVisible:"},
-        @{@"tag":kAdDidVisible, @"title":@"intersititialAdDidVisible:"},
-        @{@"tag":kAdDidClick, @"title":@"intersititialAdDidClick:"},
-        @{@"tag":kAdDidSkip, @"title":@"intersititialAdDidClickSkip:"},
-        @{@"tag":kAdDidPlayFinish, @"rowType": XLFormRowDescriptorTypeLabelInline, @"title":@"intersititialAdDidPlayFinish:didFailWithError:"},
-        @{@"tag":kAdDidClose, @"title":@"intersititialAdDidClose:"},
-    ];
-}
-
 #pragma mark - WindMillIntersititialAdDelegate
 - (void)intersititialAdDidLoad:(WindMillIntersititialAd *)intersititialAd {
     DDLogDebug(@"%@ -- %@", NSStringFromSelector(_cmd), intersititialAd.placementId);
