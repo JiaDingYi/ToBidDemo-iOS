@@ -12,33 +12,33 @@ PODS:
     - SDWebImage/Core (= 5.12.1)
   - SDWebImage/Core (5.12.1)
   - Toast (4.0.0)
-  - WindmillAd-iOS/AdmobAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/AppLovinAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/BaiduAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/GDTAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/IronSourceAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/KlevinAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/KSAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/MintegralAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/SigmobAd-iOS (1.5.0):
-    - WindmillAd-iOS/WindFoundation
-  - WindmillAd-iOS/TouTiaoAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/UnityAdsAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/VungleAdapter (1.5.0):
-    - WindmillAd-iOS/WindmillSDK
-  - WindmillAd-iOS/WindFoundation (1.5.0)
-  - WindmillAd-iOS/WindmillSDK (1.5.0):
-    - WindmillAd-iOS/SigmobAd-iOS
+  - ToBid-iOS/AdmobAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/AppLovinAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/BaiduAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/GDTAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/IronSourceAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/KlevinAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/KSAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/MintegralAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/SigmobAd-iOS (1.6.0):
+    - ToBid-iOS/WindFoundation
+  - ToBid-iOS/ToBidSDK (1.6.0):
+    - ToBid-iOS/SigmobAd-iOS
+  - ToBid-iOS/TouTiaoAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/UnityAdsAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/VungleAdapter (1.6.0):
+    - ToBid-iOS/ToBidSDK
+  - ToBid-iOS/WindFoundation (1.6.0)
   - XLForm (4.3.0)
 
 DEPENDENCIES:
@@ -51,17 +51,17 @@ DEPENDENCIES:
   - ReactiveObjC
   - SDWebImage (= 5.12.1)
   - Toast (~> 4.0.0)
-  - WindmillAd-iOS/AdmobAdapter (= 1.5.0)
-  - WindmillAd-iOS/AppLovinAdapter (= 1.5.0)
-  - WindmillAd-iOS/BaiduAdapter (= 1.5.0)
-  - WindmillAd-iOS/GDTAdapter (= 1.5.0)
-  - WindmillAd-iOS/IronSourceAdapter (= 1.5.0)
-  - WindmillAd-iOS/KlevinAdapter (= 1.5.0)
-  - WindmillAd-iOS/KSAdapter (= 1.5.0)
-  - WindmillAd-iOS/MintegralAdapter (= 1.5.0)
-  - WindmillAd-iOS/TouTiaoAdapter (= 1.5.0)
-  - WindmillAd-iOS/UnityAdsAdapter (= 1.5.0)
-  - WindmillAd-iOS/VungleAdapter (= 1.5.0)
+  - ToBid-iOS/AdmobAdapter (= 1.6.0)
+  - ToBid-iOS/AppLovinAdapter (= 1.6.0)
+  - ToBid-iOS/BaiduAdapter (= 1.6.0)
+  - ToBid-iOS/GDTAdapter (= 1.6.0)
+  - ToBid-iOS/IronSourceAdapter (= 1.6.0)
+  - ToBid-iOS/KlevinAdapter (= 1.6.0)
+  - ToBid-iOS/KSAdapter (= 1.6.0)
+  - ToBid-iOS/MintegralAdapter (= 1.6.0)
+  - ToBid-iOS/TouTiaoAdapter (= 1.6.0)
+  - ToBid-iOS/UnityAdsAdapter (= 1.6.0)
+  - ToBid-iOS/VungleAdapter (= 1.6.0)
   - XLForm (~> 4.3)
 
 SPEC REPOS:
@@ -70,7 +70,7 @@ SPEC REPOS:
     - MJExtension
     - ReactiveObjC
     - Toast
-    - WindmillAd-iOS
+    - ToBid-iOS
   trunk:
     - Bugly
     - CocoaLumberjack
@@ -89,9 +89,9 @@ SPEC CHECKSUMS:
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  WindmillAd-iOS: 36547d959400c91a2fb727978f332145c547d969
+  ToBid-iOS: ed87717936eeccaf84f492fcb74c829ebbb7abae
   XLForm: a439f9512078ed538e8335c8b06d3f3286bbfd37
 
-PODFILE CHECKSUM: 5c874a56a4f1754b6c0e8a67fe49d0c3c5958464
+PODFILE CHECKSUM: 46a785f8accb686f7e8f59852a3b961f4daafa0a
 
 COCOAPODS: 1.11.2
