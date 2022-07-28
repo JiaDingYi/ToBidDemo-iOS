@@ -12,33 +12,33 @@ PODS:
     - SDWebImage/Core (= 5.12.1)
   - SDWebImage/Core (5.12.1)
   - Toast (4.0.0)
-  - ToBid-iOS/AdmobAdapter (1.6.0):
+  - ToBid-iOS/AdmobAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/AppLovinAdapter (1.6.0):
+  - ToBid-iOS/AppLovinAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/BaiduAdapter (1.6.0):
+  - ToBid-iOS/BaiduAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/GDTAdapter (1.6.0):
+  - ToBid-iOS/GDTAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/IronSourceAdapter (1.6.0):
+  - ToBid-iOS/IronSourceAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/KlevinAdapter (1.6.0):
+  - ToBid-iOS/KlevinAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/KSAdapter (1.6.0):
+  - ToBid-iOS/KSAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/MintegralAdapter (1.6.0):
+  - ToBid-iOS/MintegralAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/SigmobAd-iOS (1.6.0):
+  - ToBid-iOS/SigmobAd-iOS (1.7.0):
     - ToBid-iOS/WindFoundation
-  - ToBid-iOS/ToBidSDK (1.6.0):
+  - ToBid-iOS/ToBidSDK (1.7.0):
     - ToBid-iOS/SigmobAd-iOS
-  - ToBid-iOS/TouTiaoAdapter (1.6.0):
+  - ToBid-iOS/TouTiaoAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/UnityAdsAdapter (1.6.0):
+  - ToBid-iOS/UnityAdsAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/VungleAdapter (1.6.0):
+  - ToBid-iOS/VungleAdapter (1.7.0):
     - ToBid-iOS/ToBidSDK
-  - ToBid-iOS/WindFoundation (1.6.0)
+  - ToBid-iOS/WindFoundation (1.7.0)
   - XLForm (4.3.0)
 
 DEPENDENCIES:
@@ -51,17 +51,17 @@ DEPENDENCIES:
   - ReactiveObjC
   - SDWebImage (= 5.12.1)
   - Toast (~> 4.0.0)
-  - ToBid-iOS/AdmobAdapter (= 1.6.0)
-  - ToBid-iOS/AppLovinAdapter (= 1.6.0)
-  - ToBid-iOS/BaiduAdapter (= 1.6.0)
-  - ToBid-iOS/GDTAdapter (= 1.6.0)
-  - ToBid-iOS/IronSourceAdapter (= 1.6.0)
-  - ToBid-iOS/KlevinAdapter (= 1.6.0)
-  - ToBid-iOS/KSAdapter (= 1.6.0)
-  - ToBid-iOS/MintegralAdapter (= 1.6.0)
-  - ToBid-iOS/TouTiaoAdapter (= 1.6.0)
-  - ToBid-iOS/UnityAdsAdapter (= 1.6.0)
-  - ToBid-iOS/VungleAdapter (= 1.6.0)
+  - ToBid-iOS/AdmobAdapter (= 1.7.0)
+  - ToBid-iOS/AppLovinAdapter (= 1.7.0)
+  - ToBid-iOS/BaiduAdapter (= 1.7.0)
+  - ToBid-iOS/GDTAdapter (= 1.7.0)
+  - ToBid-iOS/IronSourceAdapter (= 1.7.0)
+  - ToBid-iOS/KlevinAdapter (= 1.7.0)
+  - ToBid-iOS/KSAdapter (= 1.7.0)
+  - ToBid-iOS/MintegralAdapter (= 1.7.0)
+  - ToBid-iOS/TouTiaoAdapter (= 1.7.0)
+  - ToBid-iOS/UnityAdsAdapter (= 1.7.0)
+  - ToBid-iOS/VungleAdapter (= 1.7.0)
   - XLForm (~> 4.3)
 
 SPEC REPOS:
@@ -89,9 +89,9 @@ SPEC CHECKSUMS:
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
-  ToBid-iOS: 9e5c715a48f28d7830e6ee0fd175ef4a1f036ec8
+  ToBid-iOS: a8e7ce83b5df06d9b23ddf350a1accbe1ed86f21
   XLForm: a439f9512078ed538e8335c8b06d3f3286bbfd37
 
-PODFILE CHECKSUM: 46a785f8accb686f7e8f59852a3b961f4daafa0a
+PODFILE CHECKSUM: 4f18f7b3e8024a79ea6d82707fd212cd16f35f02
 
 COCOAPODS: 1.11.2

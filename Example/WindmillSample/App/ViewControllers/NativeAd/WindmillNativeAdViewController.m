@@ -44,7 +44,6 @@ static NSString *const kSliderHeight = @"slider-H";
     XLFormRowDescriptor *row;
     //********************************************************************************
     section = [self dropdownSection:[WindHelper getNativeAdDropdownDatasource]];
-    [section addFormRow:row];
     
     //********************************************************************************
     section = [XLFormSectionDescriptor formSectionWithTitle:@"设置广告位宽高"];
