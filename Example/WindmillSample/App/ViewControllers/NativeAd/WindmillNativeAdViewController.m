@@ -221,7 +221,7 @@ static NSString *const kSliderHeight = @"slider-H";
 }
 
 
-- (void)nativeAdView:(WindMillNativeAdView *)nativeAdView dislikeWithReason:(NSArray<WindDislikeWords *> *)filterWords {
+- (void)nativeAdView:(WindMillNativeAdView *)nativeAdView dislikeWithReason:(NSArray<WindMillDislikeWords *> *)filterWords {
     DDLogDebug(@"%@", NSStringFromSelector(_cmd));
     [self.view.window makeToast:NSStringFromSelector(_cmd) duration:1 position:CSToastPositionBottom];
     [self updateFromRowDisableWithTag:kAdDislike error:nil];

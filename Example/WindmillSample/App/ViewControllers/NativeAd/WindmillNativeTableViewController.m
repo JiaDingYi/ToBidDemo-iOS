@@ -277,7 +277,7 @@
     DDLogDebug(@"%@", NSStringFromSelector(_cmd));
 }
 
-- (void)nativeAdView:(WindMillNativeAdView *)nativeAdView dislikeWithReason:(NSArray<WindDislikeWords *> *)filterWords {
+- (void)nativeAdView:(WindMillNativeAdView *)nativeAdView dislikeWithReason:(NSArray<WindMillDislikeWords *> *)filterWords {
     DDLogDebug(@"%@", NSStringFromSelector(_cmd));
     [self.view.window makeToast:NSStringFromSelector(_cmd) duration:1 position:CSToastPositionBottom];
     //dislike，需要主动移除广告视图，否则有可能出现点击关闭无反应
