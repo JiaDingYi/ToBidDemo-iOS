@@ -262,8 +262,7 @@ static UIEdgeInsets const padding = {10, 15, 10, 15};
     adView.descLabel.textColor = UIColor.blackColor;
     adView.descLabel.frame = CGRectMake(padding.left, y, contentWidth, descSize.height);
     
-    
-    NSArray *arr = @[adView.leftImageView, adView.midImageView, adView.rightImageView];
+    NSArray *arr = adView.imageViewList;
     [arr mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:10 leadSpacing:padding.left tailSpacing:padding.right];
     [arr mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(adView.descLabel.mas_bottom).offset(10);
