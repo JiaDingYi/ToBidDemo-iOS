@@ -7,7 +7,6 @@
 #import "XXCSJCustomInterstitialAdapter.h"
 #import <WindFoundation/WindFoundation.h>
 #import "XXCSJExpressFullscreenVideoAd.h"
-#import "XXCSJExpressInterstitialAd.h"
 #import "XXCSJFullscreenVideoAd.h"
 
 @interface XXCSJCustomInterstitialAdapter()
@@ -40,8 +39,6 @@
     int subType = [[parameter.customInfo objectForKey:@"subType"] intValue];
     if (subType == 2) {
         return [[XXCSJExpressFullscreenVideoAd alloc] initWithBridge:self.bridge adapter:self];
-    }else if (subType == 0) {
-        return [[XXCSJExpressInterstitialAd alloc] initWithBridge:self.bridge adapter:self];
     }else if (subType == 1) {
         int templateType = [[parameter.customInfo objectForKey:@"templateType"] intValue];
         if (templateType == 1) {

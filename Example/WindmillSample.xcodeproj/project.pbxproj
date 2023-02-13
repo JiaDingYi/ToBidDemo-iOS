@@ -32,7 +32,6 @@
 		C77A22152941F72F008F8A81 /* XXCSJCustomSplashAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F12941F72F008F8A81 /* XXCSJCustomSplashAdapter.m */; };
 		C77A22162941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F42941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m */; };
 		C77A22172941F72F008F8A81 /* XXCSJFullscreenVideoAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F62941F72F008F8A81 /* XXCSJFullscreenVideoAd.m */; };
-		C77A22182941F72F008F8A81 /* XXCSJExpressInterstitialAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F82941F72F008F8A81 /* XXCSJExpressInterstitialAd.m */; };
 		C77A22192941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F92941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m */; };
 		C77A221A2941F72F008F8A81 /* XXCSJNativeAdData.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21FF2941F72F008F8A81 /* XXCSJNativeAdData.m */; };
 		C77A221B2941F72F008F8A81 /* XXCSJNativeAdViewCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A22012941F72F008F8A81 /* XXCSJNativeAdViewCreator.m */; };
@@ -123,12 +122,10 @@
 		C75F01AC27D9A09300F26DD9 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		C77A21F02941F72F008F8A81 /* XXCSJCustomSplashAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJCustomSplashAdapter.h; sourceTree = "<group>"; };
 		C77A21F12941F72F008F8A81 /* XXCSJCustomSplashAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJCustomSplashAdapter.m; sourceTree = "<group>"; };
-		C77A21F32941F72F008F8A81 /* XXCSJExpressInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJExpressInterstitialAd.h; sourceTree = "<group>"; };
 		C77A21F42941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJExpressFullscreenVideoAd.m; sourceTree = "<group>"; };
 		C77A21F52941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJCustomInterstitialAdapter.h; sourceTree = "<group>"; };
 		C77A21F62941F72F008F8A81 /* XXCSJFullscreenVideoAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJFullscreenVideoAd.m; sourceTree = "<group>"; };
 		C77A21F72941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJExpressFullscreenVideoAd.h; sourceTree = "<group>"; };
-		C77A21F82941F72F008F8A81 /* XXCSJExpressInterstitialAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJExpressInterstitialAd.m; sourceTree = "<group>"; };
 		C77A21F92941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJCustomInterstitialAdapter.m; sourceTree = "<group>"; };
 		C77A21FA2941F72F008F8A81 /* XXCSJFullscreenVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJFullscreenVideoAd.h; sourceTree = "<group>"; };
 		C77A21FC2941F72F008F8A81 /* XXCSJNativeAdViewCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJNativeAdViewCreator.h; sourceTree = "<group>"; };
@@ -427,14 +424,12 @@
 		C77A21F22941F72F008F8A81 /* Interstitial */ = {
 			isa = PBXGroup;
 			children = (
-				C77A21F32941F72F008F8A81 /* XXCSJExpressInterstitialAd.h */,
-				C77A21F42941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m */,
 				C77A21F52941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.h */,
-				C77A21F62941F72F008F8A81 /* XXCSJFullscreenVideoAd.m */,
-				C77A21F72941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.h */,
-				C77A21F82941F72F008F8A81 /* XXCSJExpressInterstitialAd.m */,
 				C77A21F92941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m */,
+				C77A21F72941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.h */,
+				C77A21F42941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m */,
 				C77A21FA2941F72F008F8A81 /* XXCSJFullscreenVideoAd.h */,
+				C77A21F62941F72F008F8A81 /* XXCSJFullscreenVideoAd.m */,
 			);
 			path = Interstitial;
 			sourceTree = "<group>";
@@ -442,15 +437,15 @@
 		C77A21FB2941F72F008F8A81 /* native */ = {
 			isa = PBXGroup;
 			children = (
-				C77A21FC2941F72F008F8A81 /* XXCSJNativeAdViewCreator.h */,
-				C77A21FD2941F72F008F8A81 /* XXNativeAdsManager.h */,
 				C77A21FE2941F72F008F8A81 /* XXCSJCustomNativeAdapter.h */,
-				C77A21FF2941F72F008F8A81 /* XXCSJNativeAdData.m */,
-				C77A22002941F72F008F8A81 /* XXNativeExpressAdManager.h */,
-				C77A22012941F72F008F8A81 /* XXCSJNativeAdViewCreator.m */,
-				C77A22022941F72F008F8A81 /* XXCSJNativeAdData.h */,
 				C77A22032941F72F008F8A81 /* XXCSJCustomNativeAdapter.m */,
+				C77A22022941F72F008F8A81 /* XXCSJNativeAdData.h */,
+				C77A21FF2941F72F008F8A81 /* XXCSJNativeAdData.m */,
+				C77A21FC2941F72F008F8A81 /* XXCSJNativeAdViewCreator.h */,
+				C77A22012941F72F008F8A81 /* XXCSJNativeAdViewCreator.m */,
+				C77A21FD2941F72F008F8A81 /* XXNativeAdsManager.h */,
 				C77A22042941F72F008F8A81 /* XXNativeAdsManager.m */,
+				C77A22002941F72F008F8A81 /* XXNativeExpressAdManager.h */,
 				C77A22052941F72F008F8A81 /* XXNativeExpressAdManager.m */,
 			);
 			path = native;
@@ -737,7 +732,6 @@
 				C73602B3275E086200B7B2C9 /* WindmillChannelVersionViewController.m in Sources */,
 				C7CD05B32761F8D90015C417 /* NativeAdCustomView.m in Sources */,
 				C7CD05D0276212980015C417 /* WindMillFeedExpressAdTableViewCell.m in Sources */,
-				C77A22182941F72F008F8A81 /* XXCSJExpressInterstitialAd.m in Sources */,
 				C7CD05D7276212D90015C417 /* FeedNormalModel.m in Sources */,
 				C7CD05B02761F6680015C417 /* WindmillNativeTableViewController.m in Sources */,
 			);
