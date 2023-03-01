@@ -45,6 +45,10 @@
 		C77A22232941F72F008F8A81 /* XXCSJCustomBannerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A22142941F72F008F8A81 /* XXCSJCustomBannerAdapter.m */; };
 		C77DF8D9282CF19100D9BB8A /* WindmillBannerAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77DF8D8282CF19100D9BB8A /* WindmillBannerAdViewController.m */; };
 		C77DF8DC282CF8E700D9BB8A /* XLFormIconButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C77DF8DB282CF8E700D9BB8A /* XLFormIconButtonCell.m */; };
+		C7B2CA9229ACA47500AF9BC6 /* AWMDrawTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B2CA9129ACA47500AF9BC6 /* AWMDrawTableViewCell.m */; };
+		C7B2CA9529ACA4D800AF9BC6 /* DrawNativeAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B2CA9429ACA4D800AF9BC6 /* DrawNativeAdViewController.m */; };
+		C7B2CA9829ADE05F00AF9BC6 /* AWMNativeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B2CA9729ADE05F00AF9BC6 /* AWMNativeListViewController.m */; };
+		C7B2CA9B29ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7B2CA9A29ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.m */; };
 		C7CD051A276084B10015C417 /* XLFormInlineLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CD0519276084B10015C417 /* XLFormInlineLabelCell.m */; };
 		C7CD05AA2761D3840015C417 /* XLFormBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CD05A92761D3840015C417 /* XLFormBaseViewController.m */; };
 		C7CD05AD2761ECD40015C417 /* XLFormSliderValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CD05AC2761ECD40015C417 /* XLFormSliderValueCell.m */; };
@@ -153,6 +157,14 @@
 		C77DF8D8282CF19100D9BB8A /* WindmillBannerAdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WindmillBannerAdViewController.m; sourceTree = "<group>"; };
 		C77DF8DA282CF8E700D9BB8A /* XLFormIconButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLFormIconButtonCell.h; sourceTree = "<group>"; };
 		C77DF8DB282CF8E700D9BB8A /* XLFormIconButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLFormIconButtonCell.m; sourceTree = "<group>"; };
+		C7B2CA9029ACA47500AF9BC6 /* AWMDrawTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWMDrawTableViewCell.h; sourceTree = "<group>"; };
+		C7B2CA9129ACA47500AF9BC6 /* AWMDrawTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWMDrawTableViewCell.m; sourceTree = "<group>"; };
+		C7B2CA9329ACA4D800AF9BC6 /* DrawNativeAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawNativeAdViewController.h; sourceTree = "<group>"; };
+		C7B2CA9429ACA4D800AF9BC6 /* DrawNativeAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawNativeAdViewController.m; sourceTree = "<group>"; };
+		C7B2CA9629ADE05F00AF9BC6 /* AWMNativeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWMNativeListViewController.h; sourceTree = "<group>"; };
+		C7B2CA9729ADE05F00AF9BC6 /* AWMNativeListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWMNativeListViewController.m; sourceTree = "<group>"; };
+		C7B2CA9929ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWMDrawAdConfigViewController.h; sourceTree = "<group>"; };
+		C7B2CA9A29ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AWMDrawAdConfigViewController.m; sourceTree = "<group>"; };
 		C7CD0518276084B10015C417 /* XLFormInlineLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLFormInlineLabelCell.h; sourceTree = "<group>"; };
 		C7CD0519276084B10015C417 /* XLFormInlineLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLFormInlineLabelCell.m; sourceTree = "<group>"; };
 		C7CD051B2760900A0015C417 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -289,10 +301,16 @@
 		C734583A27D9D1080091C25C /* NativeAd */ = {
 			isa = PBXGroup;
 			children = (
+				C7B2CA9329ACA4D800AF9BC6 /* DrawNativeAdViewController.h */,
+				C7B2CA9429ACA4D800AF9BC6 /* DrawNativeAdViewController.m */,
 				C73602AB275E083400B7B2C9 /* WindmillNativeAdViewController.h */,
 				C73602AC275E083400B7B2C9 /* WindmillNativeAdViewController.m */,
 				C7CD05AE2761F6680015C417 /* WindmillNativeTableViewController.h */,
 				C7CD05AF2761F6680015C417 /* WindmillNativeTableViewController.m */,
+				C7B2CA9629ADE05F00AF9BC6 /* AWMNativeListViewController.h */,
+				C7B2CA9729ADE05F00AF9BC6 /* AWMNativeListViewController.m */,
+				C7B2CA9929ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.h */,
+				C7B2CA9A29ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.m */,
 			);
 			path = NativeAd;
 			sourceTree = "<group>";
@@ -322,8 +340,8 @@
 				C7360299275E05B600B7B2C9 /* App */,
 				C736027D275E017D00B7B2C9 /* AppDelegate.h */,
 				C736027E275E017D00B7B2C9 /* AppDelegate.m */,
-				C7360283275E017D00B7B2C9 /* ViewController.h */,
 				C7360284275E017D00B7B2C9 /* ViewController.m */,
+				C7360283275E017D00B7B2C9 /* ViewController.h */,
 				C7360286275E017D00B7B2C9 /* Main.storyboard */,
 				C7360289275E017F00B7B2C9 /* Assets.xcassets */,
 				C736028B275E017F00B7B2C9 /* LaunchScreen.storyboard */,
@@ -502,6 +520,8 @@
 		C7CD05C2276212830015C417 /* NativeCells */ = {
 			isa = PBXGroup;
 			children = (
+				C7B2CA9029ACA47500AF9BC6 /* AWMDrawTableViewCell.h */,
+				C7B2CA9129ACA47500AF9BC6 /* AWMDrawTableViewCell.m */,
 				C7CD05D82762131B0015C417 /* WindFeedNormalTableViewCell.h */,
 				C7CD05D92762131B0015C417 /* WindFeedNormalTableViewCell.m */,
 				C7CD05CC276212970015C417 /* WindMillFeedAdBaseTableViewCell.h */,
@@ -689,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B2CA9B29ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.m in Sources */,
 				C7CD05B62761F9F50015C417 /* WindMillFeedAdViewStyle.m in Sources */,
 				C7CD05AA2761D3840015C417 /* XLFormBaseViewController.m in Sources */,
 				C73602A4275E07F500B7B2C9 /* WindmillRewardVideoAdViewController.m in Sources */,
@@ -701,6 +722,7 @@
 				C73602AA275E081F00B7B2C9 /* WindmillIntersititialAdViewController.m in Sources */,
 				C7D8C2FC275F8F7600719BFD /* XLFormDropdownCell.m in Sources */,
 				C736027F275E017D00B7B2C9 /* AppDelegate.m in Sources */,
+				C7B2CA9529ACA4D800AF9BC6 /* DrawNativeAdViewController.m in Sources */,
 				C7360290275E017F00B7B2C9 /* main.m in Sources */,
 				C77A221A2941F72F008F8A81 /* XXCSJNativeAdData.m in Sources */,
 				C77A22192941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m in Sources */,
@@ -719,7 +741,9 @@
 				C7D8C2F5275F601500719BFD /* WindHelper.m in Sources */,
 				C7CD05AD2761ECD40015C417 /* XLFormSliderValueCell.m in Sources */,
 				C77A22172941F72F008F8A81 /* XXCSJFullscreenVideoAd.m in Sources */,
+				C7B2CA9829ADE05F00AF9BC6 /* AWMNativeListViewController.m in Sources */,
 				C7CD051A276084B10015C417 /* XLFormInlineLabelCell.m in Sources */,
+				C7B2CA9229ACA47500AF9BC6 /* AWMDrawTableViewCell.m in Sources */,
 				C7CD05D2276212980015C417 /* WindMillFeedVideoTableViewCell.m in Sources */,
 				C77DF8D9282CF19100D9BB8A /* WindmillBannerAdViewController.m in Sources */,
 				C73602B0275E084700B7B2C9 /* WindmillToolViewController.m in Sources */,

@@ -17,6 +17,7 @@ static NSString * const Intersititial_Ad = @"intersititial_ad";
 static NSString * const Splash_Ad = @"splash_ad";
 static NSString * const Banner_Ad = @"banner_ad";
 static NSString * const Native_Ad = @"native_ad";
+static NSString * const Native_Draw_Ad = @"native_draw_ad";
 
 @implementation WindHelper
 
@@ -148,6 +149,10 @@ static NSString * const Native_Ad = @"native_ad";
 
 + (NSArray *)getNativeAdDropdownDatasource {
     return [self getDropdownDatasourceWithKey:Native_Ad];
+}
+
++ (NSArray *)getNativeDrawAdDropdownDatasource {
+    return [self getDropdownDatasourceWithKey:Native_Draw_Ad];
 }
 
 

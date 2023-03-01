@@ -41,6 +41,7 @@ static NSString * const kWillLeaveApplication = @"kWillLeaveApplication";
 + (NSArray *)getSplashAdDropdownDatasource;
 + (NSArray *)getBannerAdDropdownDatasource;
 + (NSArray *)getNativeAdDropdownDatasource;
++ (NSArray *)getNativeDrawAdDropdownDatasource;
 /////////////////////////////////////////////////////////////////////////////
 + (NSArray *)getBannerCallbackDatasources;
 + (NSArray *)getSplashCallbackDatasources;
