@@ -7,6 +7,7 @@
 
 #import "XLFormInlineLabelCell.h"
 #import <Masonry/Masonry.h>
+#import <UIView+Toast.h>
 
 NSString * const XLFormRowDescriptorTypeLabelInline = @"XLFormRowDescriptorTypeLabelInline";
 NSString * const XLFormRowDescriptorTypeLabelControl = @"XLFormRowDescriptorTypeLabelControl";
@@ -93,15 +94,16 @@ NSString * const XLFormRowDescriptorTypeLabelControl = @"XLFormRowDescriptorType
     return (self.rowDescriptor.value ? [self.rowDescriptor.value displayText] : self.rowDescriptor.noValueDisplayText);
 }
 
+@end
 
+@interface XLFormInlineLabelControl()
+@property(nonatomic, strong)UIButton *buttonFoCopy;
 @end
 
 @implementation XLFormInlineLabelControl
 
 @synthesize descLabel = _descLabel;
 @synthesize inlineRowDescriptor = _inlineRowDescriptor;
-
-
 + (void)load {
     [XLFormViewController.cellClassesForRowDescriptorTypes setObject:[XLFormInlineLabelControl class] forKey:XLFormRowDescriptorTypeLabelControl];
 }
@@ -117,6 +119,23 @@ NSString * const XLFormRowDescriptorTypeLabelControl = @"XLFormRowDescriptorType
         make.left.equalTo(self.contentView).offset(15);
         make.right.equalTo(self.contentView).offset(-15);
     }];
+    
+    _buttonFoCopy = [UIButton buttonWithType:UIButtonTypeCustom];
+    _buttonFoCopy.titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.contentView addSubview:_buttonFoCopy];
+    _buttonFoCopy.layer.borderColor = [UIColor orangeColor].CGColor;
+    _buttonFoCopy.layer.borderWidth = 1;
+    _buttonFoCopy.layer.cornerRadius = 5;
+    [_buttonFoCopy mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.contentView).offset(-5);
+        make.width.equalTo(@40);
+        make.height.equalTo(@15);
+        make.top.equalTo(@0);
+    }];
+    [_buttonFoCopy setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [_buttonFoCopy setTitle:@"copy" forState: UIControlStateNormal];
+    [_buttonFoCopy addTarget:self action:@selector(copyAction:) forControlEvents:UIControlEventTouchUpInside];
+
 }
 
 - (void)update {
@@ -127,6 +146,12 @@ NSString * const XLFormRowDescriptorTypeLabelControl = @"XLFormRowDescriptorType
     NSString *msg = [options componentsJoinedByString:@"\n"];
     self.descLabel.text = msg;
     DDLogDebug(@"%@", formRow);
+}
+
+- (void)copyAction: (UITapGestureRecognizer *)doubleTap {
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    pasteboard.string = self.descLabel.text;
+    [self makeToast:@"复制成功"];
 }
 
 

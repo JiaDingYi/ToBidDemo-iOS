@@ -149,6 +149,7 @@
             "placementId":"7556519713337932"
         }
     ],
+
     "native_ad":[
         {
             "name":"Sigmob",
@@ -165,6 +166,21 @@
         {
             "name":"快手",
             "placementId":"3359263494085330"
+        }
+    ]
+    ,
+    "native_draw_ad":[
+        {
+            "name":"穿山甲",
+            "placementId":"7966965775862737"
+        },
+        {
+            "name":"优量汇",
+            "placementId":"2484937648341151"
+        },
+        {
+            "name":"快手",
+            "placementId":"2729133788275611"
         }
     ]
 }

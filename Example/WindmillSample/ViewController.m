@@ -15,6 +15,7 @@
 #import "WindmillBannerAdViewController.h"
 #import "WindmillChannelVersionViewController.h"
 #import "WindmillToolViewController.h"
+#import "AWMNativeListViewController.h"
 
 @interface ViewController ()
 
@@ -137,7 +138,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)nativeAdAction:(XLFormRowDescriptor *)sender {
-    WindmillNativeAdViewController *vc = [WindmillNativeAdViewController new];
+    AWMNativeListViewController *vc = [AWMNativeListViewController new];
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)toolsAction:(XLFormRowDescriptor *)sender {
