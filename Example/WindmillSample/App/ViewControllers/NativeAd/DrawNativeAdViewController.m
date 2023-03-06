@@ -84,7 +84,7 @@
         if (cell == nil) {
             cell = [[AWMDrawAdTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         }
-        [cell refreshUIWithModel:nativeAd rootViewController:self delegate:self];
+        [cell refreshUIWithModel:nativeAd rootViewController:self delegate:self.delegateVC];
         return cell;
     }else{
         AWMDrawNormalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DrawNormalTableViewCell" forIndexPath:indexPath];

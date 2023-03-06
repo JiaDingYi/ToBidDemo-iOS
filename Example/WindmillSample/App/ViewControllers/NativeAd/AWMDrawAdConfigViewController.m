@@ -70,6 +70,7 @@
     }
     DrawNativeAdViewController *vc = [[DrawNativeAdViewController alloc] init];
     vc.adList = [NSArray arrayWithArray:self.dataSource];
+    vc.delegateVC = self;
     vc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:vc animated:YES completion:nil];
     [self.dataSource removeAllObjects];
