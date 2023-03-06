@@ -48,10 +48,6 @@
     for (NSInteger i =0 ; i <= 15; i++) {
         [datas addObject:@"App tableViewcell"];
     }
-//    for (id item in self.adList) {
-//        NSUInteger index = rand() % (datas.count - 3) + 2;
-//        [datas insertObject:item atIndex:index];
-//    }
     self.dataSource = [datas copy];
     [self.tableView reloadData];
     

@@ -58,7 +58,7 @@
     request.placementId = [self getSelectPlacementId];
     request.options = @{@"test_key":@"test_value"};
     self.nativeAdsManager = [[WindMillNativeAdsManager alloc] initWithRequest:request];
-    self.nativeAdsManager.adSize = self.view.frame.size;
+    self.nativeAdsManager.adSize = [UIScreen mainScreen].bounds.size;
     self.nativeAdsManager.delegate = self;
     [self.nativeAdsManager loadAdDataWithCount:1];
 }
