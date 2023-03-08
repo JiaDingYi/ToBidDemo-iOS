@@ -32,9 +32,7 @@
     request.userId = @"your user id";
     request.placementId = [self getSelectPlacementId];
     request.options = @{@"test_key":@"test_value"};
-    if (!self.rewardVideoAd) {
-        self.rewardVideoAd = [[WindMillRewardVideoAd alloc] initWithRequest:request];
-    }
+    self.rewardVideoAd = [[WindMillRewardVideoAd alloc] initWithRequest:request];
     self.rewardVideoAd.delegate = self;
     [self.rewardVideoAd loadAdData];
 }

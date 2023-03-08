@@ -31,9 +31,7 @@
     request.userId = @"your user id";
     request.placementId = [self getSelectPlacementId];
     request.options = @{@"test_key":@"test_value"};
-    if (!self.intersititialAd) {
-        self.intersititialAd = [[WindMillIntersititialAd alloc] initWithRequest:request];
-    }
+    self.intersititialAd = [[WindMillIntersititialAd alloc] initWithRequest:request];
     self.intersititialAd.delegate = self;
     [self.intersititialAd loadAdData];
 }

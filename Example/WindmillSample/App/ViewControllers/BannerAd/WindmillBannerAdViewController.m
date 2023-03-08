@@ -71,29 +71,28 @@ static NSString *const KUseAnimate = @"KUseAnimate";
 }
 
 - (void)didLoadAd:(XLFormRowDescriptor *)row {
+    if (self.bannerView.superview) {
+        [self.bannerView removeFromSuperview];
+        self.bannerView = nil;
+    }
     [self clearRowState:[WindHelper getBannerCallbackDatasources]];
     NSString *placementId = [self getSelectPlacementId];
-    if (!self.bannerView) {
-        WindMillAdRequest *request = [WindMillAdRequest request];
-        request.placementId = placementId;
-        request.userId = @"Your User Id";
-        self.bannerView = [[WindMillBannerView alloc] initWithRequest:request];
-        self.bannerView.backgroundColor = UIColor.yellowColor;
-        self.bannerView.delegate = self;
-        self.bannerView.viewController = self;
-        self.bannerView.animated = self.useAnimate;
-    }
+    WindMillAdRequest *request = [WindMillAdRequest request];
+    request.placementId = placementId;
+    request.userId = @"Your User Id";
+    self.bannerView = [[WindMillBannerView alloc] initWithRequest:request];
+    self.bannerView.backgroundColor = UIColor.yellowColor;
+    self.bannerView.delegate = self;
+    self.bannerView.viewController = self;
+    self.bannerView.animated = self.useAnimate;
     [self.bannerView loadAdData];
 }
 
 - (void)didPlayAd:(XLFormRowDescriptor *)row {
     if (!self.bannerView.isAdValid) {
         //广告过期后建议重新load一条广告
-        [self.view makeToast:@"广告已过期，可能是无效展示" duration:2 position:CSToastPositionCenter];
+        [self.view makeToast:@"广告加载失败或已过期，可能是无效展示" duration:2 position:CSToastPositionCenter];
         return;
-    }
-    if (self.bannerView.superview) {
-        [self.bannerView removeFromSuperview];
     }
     [self.view addSubview:self.bannerView];
 }
