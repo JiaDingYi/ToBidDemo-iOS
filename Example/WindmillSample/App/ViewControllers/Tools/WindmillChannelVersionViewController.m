@@ -7,16 +7,15 @@
 
 #import "WindmillChannelVersionViewController.h"
 #import <WindSDK/WindSDK.h>
-#import <AppLovinSDK/AppLovinSDK.h>
 #import <BUAdSDK/BUAdSDK.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
-#import <IronSource/IronSource.h>
 #import <UnityAds/UnityAds.h>
 #import <VungleSDK/VungleSDK.h>
 #import <MTGSDK/MTGSDK.h>
 #import "GDTSDKConfig.h"
 #import <KSAdSDK/KSAdSDK.h>
 #import <KlevinAdSDK/KlevinAdSDK.h>
+#import <BeiZiSDK/BeiZiSDK.h>
 #import <BaiduMobAdSDK/BaiduMobAdCommonConfig.h>
 
 
@@ -63,10 +62,9 @@
         @{@"title": @"Mintegral", @"version": MTGSDKVersion},
         @{@"title": @"UnityAds", @"version": [UnityAds getVersion]},
         @{@"title": @"Vungle", @"version": VungleSDKVersion},
-        @{@"title": @"IronSource", @"version": [IronSource sdkVersion]},
-        @{@"title": @"AppLovin", @"version": [ALSdk version]},
         @{@"title": @"百度联盟", @"version": SDK_VERSION_IN_MSSP},
         @{@"title": @"游可赢", @"version": [KlevinAdSDK sdkVersion]},
+        @{@"title": @"AdScope", @"version": [BeiZiSDKManager sdkVersion]},
     ];
 }
 

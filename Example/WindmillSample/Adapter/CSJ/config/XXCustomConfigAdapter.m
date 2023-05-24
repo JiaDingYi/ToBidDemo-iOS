@@ -31,23 +31,19 @@
 }
 - (void)initializeAdapterWithConfiguration:(AWMSdkInitConfig *)initConfig {
     NSString *appId = [initConfig.extra objectForKey:@"appID"];
-    [BUAdSDKManager setTerritory:BUAdSDKTerritory_CN];
-    [BUAdSDKManager setAppID:appId];
-    [self.bridge initializeAdapterSuccess:self];
+    BUAdSDKConfiguration *configuration = [BUAdSDKConfiguration configuration];
+    configuration.appID = appId;
+    [BUAdSDKManager startWithAsyncCompletionHandler:^(BOOL success, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (success) {
+                [self.bridge initializeAdapterSuccess:self];
+            }else {
+                [self.bridge initializeAdapterFailed:self error:error];
+            }
+        });
+    }];
 }
 - (void)didRequestAdPrivacyConfigUpdate:(NSDictionary *)config {
-    WindMillConsentStatus consentStatus = [WindMillAds getUserGDPRConsentStatus];
-    if (consentStatus == WindMillConsentDenied) {
-        [BUAdSDKManager setGDPR:1];
-    }else if (consentStatus == WindMillConsentAccepted) {
-        [BUAdSDKManager setGDPR:0];
-    }
-    WindMillAgeRestrictedStatus ageRestrictedStatus = [WindMillAds getAgeRestrictedStatus];
-    if (ageRestrictedStatus == WindMillAgeRestrictedStatusYES) {
-        [BUAdSDKManager setCoppa:1];
-    }else {
-        [BUAdSDKManager setCoppa:0];
-    }
     WindMillPersonalizedAdvertisingState personalizedAdvertisingState = [WindMillAds getPersonalizedAdvertisingState];
     if (personalizedAdvertisingState == WindMillPersonalizedAdvertisingOn) {
         [BUAdSDKManager setUserExtData:@"[{\"name\":\"personal_ads_type\",\"value\":\"1\"}]"];
