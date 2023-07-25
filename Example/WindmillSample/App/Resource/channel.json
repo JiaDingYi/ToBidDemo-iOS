@@ -1,186 +1,170 @@
 {
-    "reward_ad":[
+    "splash_ad": [
         {
-            "name":"Sigmob",
-            "placementId":"8373387208687695"
+            "name": "百度联盟_开屏广告",
+            "placementId": "9173839333293095"
         },
         {
-            "name":"穿山甲",
-            "placementId":"2214665927351825"
+            "name": "穿山甲_开屏广告_自渲染_竖",
+            "placementId": "2557859332779578"
         },
         {
-            "name":"优量汇",
-            "placementId":"0046753188978813"
+            "name": "快手广告_开屏广告_模版渲染",
+            "placementId": "5273575612847152"
         },
         {
-            "name":"快手",
-            "placementId":"6167823231227754"
+            "name": "腾讯广告_开屏广告_图文",
+            "placementId": "9874754328828823"
         },
         {
-            "name":"Mintegral",
-            "placementId":"5787358330001656"
+            "name": "adscope",
+            "placementId": "3587447376114742"
         },
         {
-            "name":"百度",
-            "placementId":"3956293378187630"
+            "name": "开屏-游可赢",
+            "placementId": "8335696523490528"
         },
         {
-            "name":"游可赢",
-            "placementId":"7868697325429031"
-        },
-        {
-            "name":"Vungle",
-            "placementId":"9757938166352981"
-        },
-        {
-            "name":"UnityAds",
-            "placementId":"1728642467353555"
+            "name": "开屏-mintegral",
+            "placementId": "4291116760884064"
         }
     ],
-    "intersititial_fullscreen_ad":[
+    "banner_ad": [
         {
-            "name":"Sigmob",
-            "placementId":"9690693976929807"
+            "name": "AdMob_横幅广告",
+            "placementId": "7242732152317874"
         },
         {
-            "name":"穿山甲",
-            "placementId":"3669507249662718"
+            "name": "百度联盟_横幅广告_7:3",
+            "placementId": "7771258158986893"
         },
         {
-            "name":"优量汇",
-            "placementId":"1540798484727804"
+            "name": "穿山甲_横幅广告_模版渲染",
+            "placementId": "7316148691848522"
         },
         {
-            "name":"快手",
-            "placementId":"7639580150401715"
+            "name": "腾讯广告_横幅广告",
+            "placementId": "1261219727399929"
         },
         {
-            "name":"Mintegral",
-            "placementId":"3219172072794542"
-        },
-        {
-            "name":"百度",
-            "placementId":"1036313174596416"
-        },
-        {
-            "name":"游可赢",
-            "placementId":"7106606464456958"
-        },
-        {
-            "name":"Vungle",
-            "placementId":"9370028652340772"
-        },
-        {
-            "name":"UnityAds",
-            "placementId":"5457847778477072"
+            "name": "unity-banner",
+            "placementId": "7556519713337932"
         }
     ],
-    "intersititial_ad":[
+    "reward_ad": [
         {
-            "name":"穿山甲",
-            "placementId":"9932244407925258"
+            "name": "AdMob_激励视频",
+            "placementId": "7765183888252898"
         },
         {
-            "name":"优量汇",
-            "placementId":"3848775378115184"
+            "name": "百度联盟_激励视频",
+            "placementId": "5289563931699841"
         },
         {
-            "name":"快手",
-            "placementId":"3690985116670027"
+            "name": "穿山甲_激励视频_模版渲染_竖 ",
+            "placementId": "5161749878887362"
         },
         {
-            "name":"百度",
-            "placementId":"4645295023471133"
+            "name": "快手广告_激励视频_竖",
+            "placementId": "9569724998587566"
+        },
+        {
+            "name": "腾讯广告_激励视频_横竖屏",
+            "placementId": "8662275972853840"
+        },
+        {
+            "name": "激励视频-穿山甲-横",
+            "placementId": "1812159969244081"
+        },
+        {
+            "name": "激励视频-vungle",
+            "placementId": "9757938166352981"
+        },
+        {
+            "name": "激励视频-mintegral",
+            "placementId": "5787358330001656"
+        },
+        {
+            "name": "激励视频-unity",
+            "placementId": "1728642467353555"
         }
     ],
-    "splash_ad":[
+    "intersititial_ad": [
         {
-            "name":"Sigmob",
-            "placementId":"8374774642581842"
+            "name": "AdMob_插屏广告_视频",
+            "placementId": "9136699615555138"
         },
         {
-            "name":"穿山甲",
-            "placementId":"2244649278022673"
+            "name": "AdMob_插屏广告",
+            "placementId": "9916923646474422"
         },
         {
-            "name":"优量汇",
-            "placementId":"0280361704608848"
+            "name": "百度联盟_智选模版插屏",
+            "placementId": "7225229189748652"
         },
         {
-            "name":"快手",
-            "placementId":"6371776519025022"
+            "name": "穿山甲_新插屏_半屏_混合素材_竖",
+            "placementId": "7514675361112896"
         },
         {
-            "name":"Mintegral",
-            "placementId":"4291116760884064"
+            "name": "穿山甲_新插屏_全屏_混合素材_竖",
+            "placementId": "2548221365353356"
         },
         {
-            "name":"百度",
-            "placementId":"2304317258044592"
+            "name": "快手广告_模版渲染_竖_混合素材",
+            "placementId": "2459616823282870"
         },
         {
-            "name":"游可赢",
-            "placementId":"8335696523490528"
+            "name": "腾讯广告_插屏广告_视频",
+            "placementId": "1664612139766065"
         }
     ],
-    "banner_ad":[
+    "native_ad": [
         {
-            "name":"穿山甲",
-            "placementId":"9828667573411889"
+            "name": "百度联盟_原生广告_智能优选",
+            "placementId": "3372685948559285"
         },
         {
-            "name":"优量汇",
-            "placementId":"1651297928518439"
+            "name": "穿山甲_模版渲染_混合素材_优选模版",
+            "placementId": "9376521516682237"
         },
         {
-            "name":"Mintegral",
-            "placementId":"3489762809157203"
+            "name": "快手广告_自渲染_混合素材_竖",
+            "placementId": "8251178562135817"
         },
         {
-            "name":"百度",
-            "placementId":"5719362963294470"
+            "name": "腾讯广告_模版_上图下文",
+            "placementId": "8614115182199349"
         },
         {
-            "name":"Vungle",
-            "placementId":"9354374486641997"
+            "name": "信息流-优量汇-视频",
+            "placementId": "4114749323373411"
         },
         {
-            "name":"UnityAds",
-            "placementId":"7556519713337932"
+            "name": "原生广告-百度-模版",
+            "placementId": "6417345522251324"
+        },
+        {
+            "name": "mtg_native_模版",
+            "placementId": "4793442109057090"
+        },
+        {
+            "name": "mtg_native",
+            "placementId": "0891126797201388"
+        },
+        {
+            "name": "信息流-sigmob",
+            "placementId": "5756789376418096"
         }
     ],
-
-    "native_ad":[
+    "native_draw_ad": [
         {
-            "name":"Sigmob",
-            "placementId":"5756789376418096"
+            "name": "穿山甲_Draw_模版渲染",
+            "placementId": "1464362417662521"
         },
         {
-            "name":"穿山甲",
-            "placementId":"9537119634397373"
-        },
-        {
-            "name":"优量汇",
-            "placementId":"7150829228286407"
-        },
-        {
-            "name":"快手",
-            "placementId":"3359263494085330"
-        }
-    ]
-    ,
-    "native_draw_ad":[
-        {
-            "name":"穿山甲",
-            "placementId":"7966965775862737"
-        },
-        {
-            "name":"优量汇",
-            "placementId":"2484937648341151"
-        },
-        {
-            "name":"快手",
-            "placementId":"2729133788275611"
+            "name": "快手广告_原生广告_Draw",
+            "placementId": "6321362398819916"
         }
     ]
 }

@@ -301,14 +301,14 @@
 		C734583A27D9D1080091C25C /* NativeAd */ = {
 			isa = PBXGroup;
 			children = (
+				C7B2CA9629ADE05F00AF9BC6 /* AWMNativeListViewController.h */,
+				C7B2CA9729ADE05F00AF9BC6 /* AWMNativeListViewController.m */,
 				C7B2CA9329ACA4D800AF9BC6 /* DrawNativeAdViewController.h */,
 				C7B2CA9429ACA4D800AF9BC6 /* DrawNativeAdViewController.m */,
 				C73602AB275E083400B7B2C9 /* WindmillNativeAdViewController.h */,
 				C73602AC275E083400B7B2C9 /* WindmillNativeAdViewController.m */,
 				C7CD05AE2761F6680015C417 /* WindmillNativeTableViewController.h */,
 				C7CD05AF2761F6680015C417 /* WindmillNativeTableViewController.m */,
-				C7B2CA9629ADE05F00AF9BC6 /* AWMNativeListViewController.h */,
-				C7B2CA9729ADE05F00AF9BC6 /* AWMNativeListViewController.m */,
 				C7B2CA9929ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.h */,
 				C7B2CA9A29ADF05B00AF9BC6 /* AWMDrawAdConfigViewController.m */,
 			);
@@ -340,8 +340,8 @@
 				C7360299275E05B600B7B2C9 /* App */,
 				C736027D275E017D00B7B2C9 /* AppDelegate.h */,
 				C736027E275E017D00B7B2C9 /* AppDelegate.m */,
-				C7360284275E017D00B7B2C9 /* ViewController.m */,
 				C7360283275E017D00B7B2C9 /* ViewController.h */,
+				C7360284275E017D00B7B2C9 /* ViewController.m */,
 				C7360286275E017D00B7B2C9 /* Main.storyboard */,
 				C7360289275E017F00B7B2C9 /* Assets.xcassets */,
 				C736028B275E017F00B7B2C9 /* LaunchScreen.storyboard */,

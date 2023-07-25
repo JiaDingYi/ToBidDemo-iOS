@@ -133,10 +133,6 @@ static NSString * const Native_Draw_Ad = @"native_draw_ad";
 }
 
 + (NSArray *)getIntersititialAdDropdownDatasource {
-    return [self getDropdownDatasourceWithKey:Intersititial_fullscreen_Ad];
-}
-
-+ (NSArray *)getIntersititialAdHalfDropdownDatasource {
     return [self getDropdownDatasourceWithKey:Intersititial_Ad];
 }
 

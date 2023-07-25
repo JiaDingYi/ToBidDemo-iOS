@@ -23,6 +23,7 @@
     } else {
         self.view.backgroundColor = UIColor.whiteColor;
     }
+    self.title = @"Draw视频信息流";
     self.tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.pagingEnabled = YES;

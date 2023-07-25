@@ -37,18 +37,17 @@ static NSString * const kWillLeaveApplication = @"kWillLeaveApplication";
 
 + (NSArray *)getRewardAdDropdownDatasource;
 + (NSArray *)getIntersititialAdDropdownDatasource;
-+ (NSArray *)getIntersititialAdHalfDropdownDatasource;
 + (NSArray *)getSplashAdDropdownDatasource;
 + (NSArray *)getBannerAdDropdownDatasource;
 + (NSArray *)getNativeAdDropdownDatasource;
 + (NSArray *)getNativeDrawAdDropdownDatasource;
-/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
 + (NSArray *)getBannerCallbackDatasources;
 + (NSArray *)getSplashCallbackDatasources;
 + (NSArray *)getIntersititialCallbackDatasources;
 + (NSArray *)getRewardVideoCallbackDatasources;
 + (NSArray *)getNativeCallbackDatasources;
-/////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
 + (XLFormSectionDescriptor *)getBannerCallbackRows;
 + (XLFormSectionDescriptor *)getSplashCallbackRows;
 + (XLFormSectionDescriptor *)getIntersititalCallbackRows;

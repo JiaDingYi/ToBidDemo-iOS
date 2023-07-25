@@ -22,6 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.whiteColor;
+    self.title = @"插屏广告";
     [self initializeForm];
 }
 
@@ -56,14 +57,8 @@
     //********************************************************************************
     section = [self dropdownSection:[WindHelper getIntersititialAdDropdownDatasource]];
     [form addFormSection:section];
-    //********************************************************************************
-    section = [XLFormSectionDescriptor formSection];
-    [form addFormSection:section];
-    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"ktype" rowType:XLFormRowDescriptorTypeSelectorSegmentedControl title:@"播放模式"];
-    row.selectorOptions = @[@"全屏播放", @"非全屏播放"];
-    row.value = @"全屏播放";
-    [section addFormRow:row];
-    //********************************************************************************
+    
+    //*****************************************************
     section = [XLFormSectionDescriptor formSection];
     section.title = @"广告示例";
     [form addFormSection:section];
@@ -127,19 +122,6 @@
     DDLogDebug(@"%@ -- %@", NSStringFromSelector(_cmd), intersititialAd.placementId);
     [self.view.window makeToast:NSStringFromSelector(_cmd) duration:1 position:CSToastPositionBottom];
     [self updateFromRowDisableWithTag:kAdDidPlayFinish error:error];
-}
-
-
-- (void)formRowDescriptorValueHasChanged:(XLFormRowDescriptor *)formRow oldValue:(id)oldValue newValue:(id)newValue {
-    if ([formRow.tag isEqualToString:@"ktype"]) {
-        XLFormRowDescriptor *row = [self.form formRowWithTag:kDropdownListView];
-        if ([formRow.value isEqualToString:@"全屏播放"]) {
-            row.selectorOptions = [WindHelper getIntersititialAdDropdownDatasource];
-        }else if ([formRow.value isEqualToString:@"非全屏播放"]) {
-            row.selectorOptions = [WindHelper getIntersititialAdHalfDropdownDatasource];
-        }
-        [self updateFormRow:row];
-    }
 }
 
 @end

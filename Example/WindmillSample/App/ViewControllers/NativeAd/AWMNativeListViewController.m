@@ -6,6 +6,7 @@
 //
 
 #import "AWMNativeListViewController.h"
+#import "XLFormRowLeftIconAndTitleCell.h"
 
 @interface AWMNativeListViewController ()
 @end
@@ -15,50 +16,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self buildSubViews];
+    self.title = @"原生广告";
+    [self initializeForm];
 }
 
+- (void)initializeForm {
+    XLFormDescriptor * form;
+    XLFormSectionDescriptor * section;
+    XLFormRowDescriptor * row;
+    form = [XLFormDescriptor formDescriptorWithTitle:@"NativePage"];
 
-- (void)buildSubViews {
-    UIStackView *stackView = [[UIStackView alloc] init];
-    stackView.axis = UILayoutConstraintAxisVertical;
-    stackView.spacing = 10;
-    stackView.distribution = UIStackViewDistributionFillEqually;
-    stackView.frame = CGRectMake(0, 0, 200, 100);
-    stackView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.view.bounds));
-    [self.view addSubview:stackView];
+    //*****************************************************
+    section = [XLFormSectionDescriptor formSection];
+    [form addFormSection:section];
     
-    NSDictionary *dataDic = @{@"draw视频信息流广告":@"clickDrawBtn:", @"原生信息流广告":@"clickNativeBtn:"};
-    NSMutableArray <UIButton *>*btnsArray = [NSMutableArray array];
-    [dataDic enumerateKeysAndObjectsUsingBlock:^(NSString *_Nonnull key, NSString *_Nonnull obj, BOOL * _Nonnull stop) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:key forState:UIControlStateNormal];
-        btn.layer.cornerRadius = 10;
-        btn.layer.borderColor = UIColor.blackColor.CGColor;
-        btn.layer.borderWidth = 1;
-        [btn setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
-        [btn addTarget:self action:NSSelectorFromString(obj) forControlEvents:UIControlEventTouchUpInside];
-        [stackView addArrangedSubview:btn];
-        [btnsArray addObject:btn];
-    }];
-        stackView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
-
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"Native-Ad" rowType:XLFormRowDescriptorTypeLeftIconAndTitle title:@"原生信息流广告"];
+    row.required = YES;
+    [row.cellConfigAtConfigure setValue:[UIImage imageNamed:@"demo_normal"] forKey:@"image"];
+    row.action.viewControllerClass = NSClassFromString(@"WindmillNativeAdViewController");
+    [section addFormRow:row];
+    
+    //*****************************************************
+    section = [XLFormSectionDescriptor formSection];
+    [form addFormSection:section];
+    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"Native-DrawAd" rowType:XLFormRowDescriptorTypeLeftIconAndTitle title:@"Draw视频信息流广告"];
+    row.required = YES;
+    [row.cellConfigAtConfigure setValue:[UIImage imageNamed:@"demo_normal"] forKey:@"image"];
+    row.action.viewControllerClass = NSClassFromString(@"AWMDrawAdConfigViewController");
+    [section addFormRow:row];
+    
+    self.form = form;
 }
-
-- (void)clickDrawBtn:(UIButton *)btn {
-    [self pushToAdVC:@"AWMDrawAdConfigViewController"];
-}
-
-- (void)clickNativeBtn:(UIButton *)btn {
-    [self pushToAdVC:@"WindmillNativeAdViewController"];
-}
-
--(void)pushToAdVC:(NSString *)vcClassStr {
-    Class cls = NSClassFromString(vcClassStr);
-    if(!cls){
-        return;
-    }
-    [self.navigationController pushViewController:[[cls alloc]init] animated:YES];
-}
-
 @end

@@ -28,6 +28,7 @@ static NSString *const KUseAnimate = @"KUseAnimate";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"横幅广告";
     [self initializeForm];
 }
 
