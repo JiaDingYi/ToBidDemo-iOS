@@ -108,11 +108,11 @@ static NSString *const kSliderHeight = @"slider-H";
     if (nativeAdList.count == 0) return;
     WindMillNativeAd *nativeAd = nativeAdList.firstObject;
     self.adView = [NativeAdCustomView new];
+    [self.view addSubview:self.contentView];
+    [self.contentView addSubview:self.adView];
     self.adView.delegate = self;
     [self.adView refreshData:nativeAd];
     self.adView.viewController = self;
-    [self.view addSubview:self.contentView];
-    [self.contentView addSubview:self.adView];
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(self.width);
         make.center.equalTo(self.view);
@@ -151,6 +151,9 @@ static NSString *const kSliderHeight = @"slider-H";
     [self updateFromRowDisableWithTag:kAdDidRenderSuccess error:nil];
     //渲染成功后更新约束
     [WindMillFeedAdViewStyle layoutWithModel:nativeExpressAdView.nativeAd adView:self.adView];
+    [self.contentView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(self.adView.frame.size.height);
+    }];
 }
 
 - (void)nativeExpressAdViewRenderFail:(WindMillNativeAdView *)nativeExpressAdView error:(NSError *)error {
