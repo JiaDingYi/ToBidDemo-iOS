@@ -151,7 +151,7 @@
 - (void)splashAdViewControllerDidClose:(nonnull BUSplashAd *)splashAd {}
 - (void)splashAdWillShow:(nonnull BUSplashAd *)splashAd {}
 - (void)splashDidCloseOtherController:(nonnull BUSplashAd *)splashAd interactionType:(BUInteractionType)interactionType {}
-- (void)splashVideoAdDidPlayFinish:(nonnull BUSplashAd *)splashAd didFailWithError:(nonnull NSError *)error {}
+- (void)splashVideoAdDidPlayFinish:(nonnull BUSplashAd *)splashAd didFailWithError:(NSError *)error {}
 
 #pragma mark - BUSplashZoomOutDelegate
 - (void)splashZoomOutViewDidClick:(BUSplashAd *)splashAd {

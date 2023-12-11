@@ -100,7 +100,14 @@
         logoHeight = 150;
     }
     CGSize adSize = CGSizeMake(self.navigationController.view.bounds.size.width, self.navigationController.view.bounds.size.height-logoHeight);
-    NSDictionary *extra = @{kWindMillSplashExtraAdSize: NSStringFromCGSize(adSize)};
+    UIView *bottomView;
+    if ([self hasLogo]) {
+        bottomView = [self getLogoView];
+    }
+    NSDictionary *extra = @{kWindMillSplashExtraAdSize: NSStringFromCGSize(adSize),
+                            kWindMillSplashExtraBottomViewSize:NSStringFromCGSize(CGSizeMake(adSize.width, logoHeight)),
+                            kWindMillSplashExtraBottomView: bottomView
+    };
     WindMillAdRequest *request = [WindMillAdRequest request];
     request.placementId = [self getSelectPlacementId];
     request.userId = @"your user id";
