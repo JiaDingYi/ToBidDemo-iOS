@@ -25,6 +25,8 @@
 @property (strong, nonatomic) UITableView *tableView;
 @property (nonatomic, strong) WindMillNativeAdsManager *nativeAdsManager;
 @property (nonatomic, strong) NSMutableDictionary *nativeExpressViewHeightDict;
+@property (nonatomic, assign) NSUInteger refreshState;
+
 @end
 
 @implementation WindmillNativeTableViewController
@@ -57,14 +59,16 @@
 }
 
 - (void)pbud_insertIntoDataSourceWithArray:(NSArray *)array {
-    if (self.dataSource.count > 3) {
-        //随机
-        for (id item in array) {
-            NSUInteger index = rand() % (self.dataSource.count - 3) + 2;
-            [self.dataSource insertObject:item atIndex:index];
-        }
-    }else {
+    if (self.refreshState == 2) {
         [self.dataSource addObjectsFromArray:array];
+    }else {
+        if (self.dataSource.count > 3) {
+            //随机
+            for (id item in array) {
+                NSUInteger index = rand() % (self.dataSource.count - 3) + 2;
+                [self.dataSource insertObject:item atIndex:index];
+            }
+        }
     }
 }
 
@@ -92,13 +96,28 @@
            forCellReuseIdentifier:@"WindMillFeedAdImageGroupTableViewCell"];
     [self.tableView registerClass:[WindMillFeedVideoTableViewCell class]
            forCellReuseIdentifier:@"WindMillFeedVideoTableViewCell"];
+    
+    __weak typeof(self) weakSelf = self;
+    MJRefreshFooter *refreshFooter = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        strongSelf.refreshState = 2;
+        [strongSelf loadMoreAds];
+        [strongSelf.tableView.mj_footer endRefreshing];
+    }];
+    self.tableView.mj_footer = refreshFooter;
 }
 
+
+- (void)loadMoreAds {
+    DDLogDebug(@"loadMoreAds---");
+    [self loadAdData];
+}
 
 - (void)loadAdData {
     if (!self.nativeAdsManager) {
         WindMillAdRequest *request = [WindMillAdRequest request];
         request.placementId = self.placementId;
+        request.placementId = @"1619313335657755";
         request.userId = @"your user id";
         request.options = @{@"test_key_1":@"test_value"};//s2s激励回传自定义参数，可以为nil
         self.nativeAdsManager = [[WindMillNativeAdsManager alloc] initWithRequest:request];
