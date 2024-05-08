@@ -10,7 +10,7 @@
 #import <BUAdSDK/BUAdSDK.h>
 #import <GoogleMobileAds/GoogleMobileAds.h>
 #import <UnityAds/UnityAds.h>
-#import <VungleSDK/VungleSDK.h>
+#import <VungleAdsSDK/VungleAdsSDK.h>
 #import <MTGSDK/MTGSDK.h>
 #import "GDTSDKConfig.h"
 #import <KSAdSDK/KSAdSDK.h>
@@ -61,7 +61,7 @@
         @{@"title": @"Admob", @"version": [[GADMobileAds sharedInstance] sdkVersion]},
         @{@"title": @"Mintegral", @"version": MTGSDKVersion},
         @{@"title": @"UnityAds", @"version": [UnityAds getVersion]},
-        @{@"title": @"Vungle", @"version": VungleSDKVersion},
+        @{@"title": @"Vungle", @"version": [VungleAds sdkVersion]},
         @{@"title": @"百度联盟", @"version": SDK_VERSION_IN_MSSP},
         @{@"title": @"游可赢", @"version": [KlevinAdSDK sdkVersion]},
         @{@"title": @"AdScope", @"version": [BeiZiSDKManager sdkVersion]},

@@ -83,13 +83,11 @@ static NSString *const kSliderHeight = @"slider-H";
 
 - (void)showAdNormal:(XLFormRowDescriptor *)row {
     [self clearRowState:[WindHelper getNativeCallbackDatasources]];
-    if (!self.nativeAdsManager) {
-        WindMillAdRequest *request = [WindMillAdRequest request];
-        request.placementId = [self getSelectPlacementId];
-        request.userId = @"your user id";
-        request.options = @{@"test_key_1":@"test_value"};//s2s激励回传自定义参数，可以为nil
-        self.nativeAdsManager = [[WindMillNativeAdsManager alloc] initWithRequest:request];
-    }
+    WindMillAdRequest *request = [WindMillAdRequest request];
+    request.placementId = [self getSelectPlacementId];
+    request.userId = @"your user id";
+    request.options = @{@"test_key_1":@"test_value"};//s2s激励回传自定义参数，可以为nil
+    self.nativeAdsManager = [[WindMillNativeAdsManager alloc] initWithRequest:request];
     self.nativeAdsManager.adSize = CGSizeMake(self.width, self.height);
     self.nativeAdsManager.delegate = self;
     [self.nativeAdsManager loadAdDataWithCount:1];
