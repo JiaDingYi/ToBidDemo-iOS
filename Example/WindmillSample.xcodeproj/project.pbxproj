@@ -31,7 +31,6 @@
 		C75F01AD27D9A09300F26DD9 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C75F01AC27D9A09300F26DD9 /* libbz2.tbd */; };
 		C77A22152941F72F008F8A81 /* XXCSJCustomSplashAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F12941F72F008F8A81 /* XXCSJCustomSplashAdapter.m */; };
 		C77A22162941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F42941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m */; };
-		C77A22172941F72F008F8A81 /* XXCSJFullscreenVideoAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F62941F72F008F8A81 /* XXCSJFullscreenVideoAd.m */; };
 		C77A22192941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21F92941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m */; };
 		C77A221A2941F72F008F8A81 /* XXCSJNativeAdData.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A21FF2941F72F008F8A81 /* XXCSJNativeAdData.m */; };
 		C77A221B2941F72F008F8A81 /* XXCSJNativeAdViewCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A22012941F72F008F8A81 /* XXCSJNativeAdViewCreator.m */; };
@@ -40,7 +39,6 @@
 		C77A221E2941F72F008F8A81 /* XXNativeExpressAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A22052941F72F008F8A81 /* XXNativeExpressAdManager.m */; };
 		C77A221F2941F72F008F8A81 /* XXCustomConfigAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A22082941F72F008F8A81 /* XXCustomConfigAdapter.m */; };
 		C77A22202941F72F008F8A81 /* XXCSJExpressRewardVideoAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A220C2941F72F008F8A81 /* XXCSJExpressRewardVideoAd.m */; };
-		C77A22212941F72F008F8A81 /* XXCSJRewardedVideoAd.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A220E2941F72F008F8A81 /* XXCSJRewardedVideoAd.m */; };
 		C77A22222941F72F008F8A81 /* XXCSJCustomRewardedVideoAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A220F2941F72F008F8A81 /* XXCSJCustomRewardedVideoAdapter.m */; };
 		C77A22232941F72F008F8A81 /* XXCSJCustomBannerAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C77A22142941F72F008F8A81 /* XXCSJCustomBannerAdapter.m */; };
 		C77DF8D9282CF19100D9BB8A /* WindmillBannerAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C77DF8D8282CF19100D9BB8A /* WindmillBannerAdViewController.m */; };
@@ -128,10 +126,8 @@
 		C77A21F12941F72F008F8A81 /* XXCSJCustomSplashAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJCustomSplashAdapter.m; sourceTree = "<group>"; };
 		C77A21F42941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJExpressFullscreenVideoAd.m; sourceTree = "<group>"; };
 		C77A21F52941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJCustomInterstitialAdapter.h; sourceTree = "<group>"; };
-		C77A21F62941F72F008F8A81 /* XXCSJFullscreenVideoAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJFullscreenVideoAd.m; sourceTree = "<group>"; };
 		C77A21F72941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJExpressFullscreenVideoAd.h; sourceTree = "<group>"; };
 		C77A21F92941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJCustomInterstitialAdapter.m; sourceTree = "<group>"; };
-		C77A21FA2941F72F008F8A81 /* XXCSJFullscreenVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJFullscreenVideoAd.h; sourceTree = "<group>"; };
 		C77A21FC2941F72F008F8A81 /* XXCSJNativeAdViewCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJNativeAdViewCreator.h; sourceTree = "<group>"; };
 		C77A21FD2941F72F008F8A81 /* XXNativeAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXNativeAdsManager.h; sourceTree = "<group>"; };
 		C77A21FE2941F72F008F8A81 /* XXCSJCustomNativeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJCustomNativeAdapter.h; sourceTree = "<group>"; };
@@ -147,10 +143,8 @@
 		C77A220A2941F72F008F8A81 /* XXCSJAdProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJAdProtocol.h; sourceTree = "<group>"; };
 		C77A220C2941F72F008F8A81 /* XXCSJExpressRewardVideoAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJExpressRewardVideoAd.m; sourceTree = "<group>"; };
 		C77A220D2941F72F008F8A81 /* XXCSJCustomRewardedVideoAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJCustomRewardedVideoAdapter.h; sourceTree = "<group>"; };
-		C77A220E2941F72F008F8A81 /* XXCSJRewardedVideoAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJRewardedVideoAd.m; sourceTree = "<group>"; };
 		C77A220F2941F72F008F8A81 /* XXCSJCustomRewardedVideoAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJCustomRewardedVideoAdapter.m; sourceTree = "<group>"; };
 		C77A22102941F72F008F8A81 /* XXCSJExpressRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJExpressRewardVideoAd.h; sourceTree = "<group>"; };
-		C77A22112941F72F008F8A81 /* XXCSJRewardedVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJRewardedVideoAd.h; sourceTree = "<group>"; };
 		C77A22132941F72F008F8A81 /* XXCSJCustomBannerAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXCSJCustomBannerAdapter.h; sourceTree = "<group>"; };
 		C77A22142941F72F008F8A81 /* XXCSJCustomBannerAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXCSJCustomBannerAdapter.m; sourceTree = "<group>"; };
 		C77DF8D7282CF19100D9BB8A /* WindmillBannerAdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WindmillBannerAdViewController.h; sourceTree = "<group>"; };
@@ -446,8 +440,6 @@
 				C77A21F92941F72F008F8A81 /* XXCSJCustomInterstitialAdapter.m */,
 				C77A21F72941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.h */,
 				C77A21F42941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m */,
-				C77A21FA2941F72F008F8A81 /* XXCSJFullscreenVideoAd.h */,
-				C77A21F62941F72F008F8A81 /* XXCSJFullscreenVideoAd.m */,
 			);
 			path = Interstitial;
 			sourceTree = "<group>";
@@ -489,12 +481,10 @@
 		C77A220B2941F72F008F8A81 /* rewardVideo */ = {
 			isa = PBXGroup;
 			children = (
-				C77A220C2941F72F008F8A81 /* XXCSJExpressRewardVideoAd.m */,
 				C77A220D2941F72F008F8A81 /* XXCSJCustomRewardedVideoAdapter.h */,
-				C77A220E2941F72F008F8A81 /* XXCSJRewardedVideoAd.m */,
 				C77A220F2941F72F008F8A81 /* XXCSJCustomRewardedVideoAdapter.m */,
 				C77A22102941F72F008F8A81 /* XXCSJExpressRewardVideoAd.h */,
-				C77A22112941F72F008F8A81 /* XXCSJRewardedVideoAd.h */,
+				C77A220C2941F72F008F8A81 /* XXCSJExpressRewardVideoAd.m */,
 			);
 			path = rewardVideo;
 			sourceTree = "<group>";
@@ -731,7 +721,6 @@
 				C77A22152941F72F008F8A81 /* XXCSJCustomSplashAdapter.m in Sources */,
 				C77A22162941F72F008F8A81 /* XXCSJExpressFullscreenVideoAd.m in Sources */,
 				C77A221E2941F72F008F8A81 /* XXNativeExpressAdManager.m in Sources */,
-				C77A22212941F72F008F8A81 /* XXCSJRewardedVideoAd.m in Sources */,
 				C7CD05DA2762131B0015C417 /* WindFeedNormalTableViewCell.m in Sources */,
 				C77A22222941F72F008F8A81 /* XXCSJCustomRewardedVideoAdapter.m in Sources */,
 				C7CD05D3276212980015C417 /* WindMillFeedAdBaseTableViewCell.m in Sources */,
@@ -740,7 +729,6 @@
 				C7CD05CF276212980015C417 /* WindMillFeedAdLeftTableViewCell.m in Sources */,
 				C7D8C2F5275F601500719BFD /* WindHelper.m in Sources */,
 				C7CD05AD2761ECD40015C417 /* XLFormSliderValueCell.m in Sources */,
-				C77A22172941F72F008F8A81 /* XXCSJFullscreenVideoAd.m in Sources */,
 				C7B2CA9829ADE05F00AF9BC6 /* AWMNativeListViewController.m in Sources */,
 				C7CD051A276084B10015C417 /* XLFormInlineLabelCell.m in Sources */,
 				C7B2CA9229ACA47500AF9BC6 /* AWMDrawTableViewCell.m in Sources */,

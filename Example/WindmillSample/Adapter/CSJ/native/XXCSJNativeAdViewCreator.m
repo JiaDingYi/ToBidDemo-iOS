@@ -61,7 +61,7 @@
 }
 #pragma mark - Getter
 - (UIView *)adLogoView {
-    return self.adView.logoImageView;
+    return self.adView.logoADImageView;
 }
 - (UIButton *)dislikeBtn {
     return self.adView.dislikeButton;

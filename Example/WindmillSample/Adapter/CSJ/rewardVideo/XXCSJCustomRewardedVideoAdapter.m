@@ -7,7 +7,6 @@
 
 #import "XXCSJCustomRewardedVideoAdapter.h"
 #import <WindFoundation/WindFoundation.h>
-#import "XXCSJRewardedVideoAd.h"
 #import "XXCSJExpressRewardVideoAd.h"
 
 @interface XXCSJCustomRewardedVideoAdapter ()
@@ -28,11 +27,7 @@
 }
 - (void)loadAdWithPlacementId:(NSString *)placementId parameter:(AWMParameter *)parameter {
     int templateType = [[parameter.customInfo objectForKey:@"templateType"] intValue];
-    if (templateType == 1) {
-        self.ad = [[XXCSJRewardedVideoAd alloc] initWithBridge:self.bridge adapter:self];
-    }else {
-        self.ad = [[XXCSJExpressRewardVideoAd alloc] initWithBridge:self.bridge adapter:self];
-    }
+    self.ad = [[XXCSJExpressRewardVideoAd alloc] initWithBridge:self.bridge adapter:self];
     [self.ad loadAdWithPlacementId:placementId parameter:parameter];
 }
 - (BOOL)showAdFromRootViewController:(UIViewController *)viewController parameter:(AWMParameter *)parameter {

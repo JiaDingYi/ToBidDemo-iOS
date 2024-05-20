@@ -7,7 +7,6 @@
 #import "XXCSJCustomInterstitialAdapter.h"
 #import <WindFoundation/WindFoundation.h>
 #import "XXCSJExpressFullscreenVideoAd.h"
-#import "XXCSJFullscreenVideoAd.h"
 
 @interface XXCSJCustomInterstitialAdapter()
 @property (nonatomic, weak) id<AWMCustomInterstitialAdapterBridge> bridge;
@@ -40,12 +39,7 @@
     if (subType == 2) {
         return [[XXCSJExpressFullscreenVideoAd alloc] initWithBridge:self.bridge adapter:self];
     }else if (subType == 1) {
-        int templateType = [[parameter.customInfo objectForKey:@"templateType"] intValue];
-        if (templateType == 1) {
-            return [[XXCSJFullscreenVideoAd alloc] initWithBridge:self.bridge adapter:self];
-        }else {
-            return [[XXCSJExpressFullscreenVideoAd alloc] initWithBridge:self.bridge adapter:self];
-        }
+        return [[XXCSJExpressFullscreenVideoAd alloc] initWithBridge:self.bridge adapter:self];
     }
     return nil;
 }
