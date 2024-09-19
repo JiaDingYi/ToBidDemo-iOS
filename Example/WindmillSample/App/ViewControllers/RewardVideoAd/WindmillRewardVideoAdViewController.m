@@ -35,6 +35,17 @@
     request.options = @{@"test_key":@"test_value"};
     self.rewardVideoAd = [[WindMillRewardVideoAd alloc] initWithRequest:request];
     self.rewardVideoAd.delegate = self;
+//    WindMillWaterfallFilter *fl = [[WindMillWaterfallFilter alloc] initWithPlacementId:@"4258437148130927"];
+//    fl.equalTo(WaterfallFilterKeyChannelId,@(WindMillAdnAdMate).stringValue);
+//    fl.equalTo(WaterfallFilterKeyChannelId,@(WindMillAdnSigmob).stringValue);
+//    fl.equalTo(WaterfallFilterKeyECPM,@"1200");
+//    fl.greaterThanOrEqualTo(WaterfallFilterKeyECPM,@(1200));
+//    fl.lessThanOrEqualTo(WaterfallFilterKeyECPM,@(99900));
+//    fl.greaterThanOrEqualTo(WaterfallFilterKeyECPM,@(1200));
+//    fl.lessThanOrEqualTo(WaterfallFilterKeyECPM,@(99900));
+//    fl.equalTo(WaterfallFilterKeyBiddingType,@(WindMillFilterTypeNormal).stringValue);
+//    fl.equalTo(WaterfallFilterKeyBiddingType,@(WindMillFilterTypeC2S).stringValue);
+//    [WindMillAds addFilter:fl];
     [self.rewardVideoAd loadAdData];
 }
 - (void)showAd:(XLFormRowDescriptor *)row {

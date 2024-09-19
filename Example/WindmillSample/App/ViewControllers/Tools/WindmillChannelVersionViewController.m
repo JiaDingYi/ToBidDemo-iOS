@@ -58,7 +58,7 @@
         @{@"title": @"穿山甲", @"version": [BUAdSDKManager SDKVersion]},
         @{@"title": @"腾讯优量汇", @"version": [GDTSDKConfig sdkVersion]},
         @{@"title": @"快手", @"version": [KSAdSDKManager SDKVersion]},
-        @{@"title": @"Admob", @"version": [[GADMobileAds sharedInstance] sdkVersion]},
+        @{@"title": @"Admob", @"version": GADGetStringFromVersionNumber([[GADMobileAds sharedInstance] versionNumber])},
         @{@"title": @"Mintegral", @"version": MTGSDKVersion},
         @{@"title": @"UnityAds", @"version": [UnityAds getVersion]},
         @{@"title": @"Vungle", @"version": [VungleAds sdkVersion]},
