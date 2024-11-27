@@ -110,6 +110,8 @@ static NSString *const kSliderHeight = @"slider-H";
     [self.contentView addSubview:self.adView];
     self.adView.delegate = self;
     [self.adView refreshData:nativeAd];
+    [self.adView setMediaViewSize:CGSizeMake(375, 300)];
+    [self.adView setProgressViewEnable:NO];
     self.adView.viewController = self;
     [self.contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(self.width);
