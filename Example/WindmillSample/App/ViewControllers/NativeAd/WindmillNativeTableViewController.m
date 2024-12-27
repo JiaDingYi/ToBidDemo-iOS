@@ -47,7 +47,9 @@
     NSString *feedPath = [[NSBundle mainBundle] pathForResource:@"feedInfo" ofType:@"cactus"];
     NSString *feedStr = [NSString stringWithContentsOfFile:feedPath encoding:NSUTF8StringEncoding error:nil];
     NSArray *arr = [FeedNormalModel mj_objectArrayWithKeyValuesArray:[feedStr mj_JSONObject]];
-    self.dataSource = [NSMutableArray new];
+    if (!self.dataSource) {
+        self.dataSource = [NSMutableArray new];
+    }
     [self.dataSource addObjectsFromArray:arr];
     NSInteger datasCount = arr.count;
     if (datasCount > 3) {
@@ -117,7 +119,6 @@
     if (!self.nativeAdsManager) {
         WindMillAdRequest *request = [WindMillAdRequest request];
         request.placementId = self.placementId;
-        request.placementId = @"1619313335657755";
         request.userId = @"your user id";
         request.options = @{@"test_key_1":@"test_value"};//s2s激励回传自定义参数，可以为nil
         self.nativeAdsManager = [[WindMillNativeAdsManager alloc] initWithRequest:request];
@@ -194,24 +195,31 @@
     }
     if ([model isKindOfClass:[WindMillNativeAd class]]) {
         WindMillNativeAd *nativeAd = (WindMillNativeAd *)model;
+        NSString *cellIdentifier = [NSString stringWithFormat:@"exp-cell-%ld%ld", (long)[indexPath section], (long)[indexPath row]];//以indexPath来唯一确定cell
         WindMillFeedAdBaseTableViewCell<WindMillFeedCellProtocol> *cell;
+        DDLogDebug(@"cellIdentifier = %@", cellIdentifier);
+        ///cell不能复用
+        cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         if (nativeAd.feedADMode == WindMillFeedADModeNativeExpress) {
-            //模版渲染的cell不复用，三方adn不支持
-            NSString *cellIdentifier = [NSString stringWithFormat:@"ExpCell%ld%ld", (long)[indexPath section], (long)[indexPath row]];//以indexPath来唯一确定cell
-            cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier]; //出列可重用的cell
             if (cell == nil) {
                 cell = [[WindMillFeedExpressAdTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
             }
-            
-            
         }else if (nativeAd.feedADMode == WindMillFeedADModeSmallImage) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"WindMillFeedAdLeftTableViewCell" forIndexPath:indexPath];
-        }else if (nativeAd.feedADMode == WindMillFeedADModeLargeImage) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"WindMillFeedAdLargeTableViewCell" forIndexPath:indexPath];
+            if (cell == nil) {
+                cell = [[WindMillFeedAdLeftTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+            }
+        }else if (nativeAd.feedADMode == WindMillFeedADModeLargeImage || nativeAd.feedADMode == WindMillFeedADModePortraitImage ) {
+            if (cell == nil) {
+                cell = [[WindMillFeedAdLargeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+            }
         }else if (nativeAd.feedADMode == WindMillFeedADModeGroupImage) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"WindMillFeedAdImageGroupTableViewCell" forIndexPath:indexPath];
+            if (cell == nil) {
+                cell = [[WindMillFeedAdImageGroupTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+            }
         }else if (nativeAd.feedADMode == WindMillFeedADModeVideo || nativeAd.feedADMode == WindMillFeedADModeVideoPortrait || nativeAd.feedADMode == WindMillFeedADModeVideoLandSpace) {
-            cell = [tableView dequeueReusableCellWithIdentifier:@"WindMillFeedVideoTableViewCell" forIndexPath:indexPath];
+            if (cell == nil) {
+                cell = [[WindMillFeedVideoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+            }
         }
         [cell refreshUIWithModel:nativeAd rootViewController:self delegate:self];
         return cell;

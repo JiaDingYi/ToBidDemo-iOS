@@ -24,7 +24,7 @@ target 'WindmillSample' do
   
   # Pods for WindmillSample
   commonPods
-  pod 'ToBid-iOS', '4.1.11', :subspecs => [
+  pod 'ToBid-iOS', '4.3.0', :subspecs => [
       'TouTiaoAdapter',
       'AdmobAdapter',
       'CSJMediationAdapter',
@@ -36,7 +36,8 @@ target 'WindmillSample' do
       'BaiduAdapter',
       'KlevinAdapter',
       'MSAdAdapter',
-      'AdScopeAdapter'
+      'AdScopeAdapter',
+      'BidResultAdapter',
   ]
 end
 
