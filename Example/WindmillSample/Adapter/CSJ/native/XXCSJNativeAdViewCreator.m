@@ -93,7 +93,7 @@
     return _imageViewArray;
 }
 - (UIView *)mediaView {
-    return self.adView.videoAdView;
+    return self.adView.mediaAdView;
 }
 - (void)dealloc {
     WindmillLogDebug(@"CSJ", @"%s", __func__);
