@@ -22,7 +22,7 @@
     [self initTableApparance];
     [WindMillAds setDebugEnable:YES];
     //初始化SDK
-    [WindMillAds setupSDKWithAppId:@"16990"];
+    [WindMillAds setupSDKWithAppId:@"62597"];
     
     return YES;
 }

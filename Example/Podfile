@@ -24,7 +24,7 @@ target 'WindmillSample' do
   
   # Pods for WindmillSample
   commonPods
-  pod 'ToBid-iOS', '4.5.4', :subspecs => [
+  pod 'ToBid-iOS', '4.5.10', :subspecs => [
       'TouTiaoAdapter',
       'AdmobAdapter',
       'CSJMediationAdapter',
@@ -43,6 +43,7 @@ target 'WindmillSample' do
       'MercuryAdapter',
       'QuMengAdapter'
   ]
+  pod 'ToBidMentaCustomAdapter', :path => '../'
 end
 
 post_install do |installer|

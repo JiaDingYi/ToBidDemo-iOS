@@ -1,6 +1,10 @@
 {
     "splash_ad": [
         {
+            "name": "Menta_开屏广告",
+            "placementId": "1326256574967433"
+        },
+        {
             "name": "百度联盟_开屏广告",
             "placementId": "9173839333293095"
         },
@@ -31,6 +35,10 @@
     ],
     "banner_ad": [
         {
+            "name": "Menta_横幅广告",
+            "placementId": "7694571525581052"
+        },
+        {
             "name": "AdMob_横幅广告",
             "placementId": "7242732152317874"
         },
@@ -52,6 +60,10 @@
         }
     ],
     "reward_ad": [
+        {
+            "name": "Menta_激励视频",
+            "placementId": "5377566647116829"
+        },
         {
             "name": "AdMob_激励视频",
             "placementId": "7765183888252898"
@@ -91,6 +103,10 @@
     ],
     "intersititial_ad": [
         {
+            "name": "Menta_插屏视频",
+            "placementId": "4767861988915227"
+        },
+        {
             "name": "AdMob_插屏广告_视频",
             "placementId": "9136699615555138"
         },
@@ -120,6 +136,10 @@
         }
     ],
     "native_ad": [
+        {
+            "name": "Menta_原生广告",
+            "placementId": "9119418325928631"
+        },
         {
             "name": "百度联盟_原生广告_智能优选",
             "placementId": "3372685948559285"
