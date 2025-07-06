@@ -125,10 +125,12 @@
 - (void)menta_splashAd:(MentaUnifiedSplashAd *_Nonnull)splashAd bestTargetSourcePlatformInfo:(NSDictionary *_Nonnull)info {
     WindmillLogDebug(@"Menta", @"%@", NSStringFromSelector(_cmd));
     NSNumber *ecpm = info[@"BEST_SOURCE_PRICE"];
-    NSString *price = [ecpm stringValue];
-    [self.bridge splashAd:self didAdServerResponseWithExt:@{
-        AWMMediaAdLoadingExtECPM: price
-    }];
+    if (ecpm) {
+        NSString *price = [ecpm stringValue];
+        [self.bridge splashAd:self didAdServerResponseWithExt:@{
+            AWMMediaAdLoadingExtECPM: price
+        }];
+    }
 }
 
 @end
