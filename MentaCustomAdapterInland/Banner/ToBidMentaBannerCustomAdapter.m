@@ -30,15 +30,15 @@
 - (void)loadAdWithPlacementId:(NSString *)placementId parameter:(AWMParameter *)parameter {
     // 模版比例
     // 先确定app展示banner广告位区域的 宽高比, 然后再在menta后台设置 相应或相近比例的模版
-    NSString *sizeStr = [parameter.customInfo objectForKey:@"adSize"];
-    CGSize adSize = CGSizeFromString(sizeStr);
-    if (CGSizeEqualToSize(CGSizeZero, adSize)) {
-        NSError *error = [NSError errorWithDomain:@"strategy" code:-60004 userInfo:@{NSLocalizedDescriptionKey:@"adSize设置错误"}];
-        [self.bridge bannerAd:self didLoadFailWithError:error ext:nil];
-        return;
-    }
+//    NSString *sizeStr = [parameter.customInfo objectForKey:@"adSize"];
+//    CGSize adSize = CGSizeFromString(sizeStr);
+//    if (CGSizeEqualToSize(CGSizeZero, adSize)) {
+//        NSError *error = [NSError errorWithDomain:@"strategy" code:-60004 userInfo:@{NSLocalizedDescriptionKey:@"adSize设置错误"}];
+//        [self.bridge bannerAd:self didLoadFailWithError:error ext:nil];
+//        return;
+//    }
     MUBannerConfig *config = [[MUBannerConfig alloc] init];
-    config.adSize = adSize;
+    config.adSize = CGSizeMake(320, 50);
     config.slotId = placementId;
     config.materialFillMode = MentaBannerAdMaterialFillMode_ScaleAspectFill;
     UIViewController *viewController = [self.bridge viewControllerForPresentingModalView];
