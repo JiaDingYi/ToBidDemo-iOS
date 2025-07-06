@@ -69,7 +69,15 @@
     return @[];
 }
 
+- (WindMillAdn)networkId {
+    return WindMillAdnCustom;
+}
+
+- (AWMNativeAdSlotAdType)adType {
+    return AWMNativeAdSlotAdTypeFeed;
+}
+
 - (void)dealloc {
-    WindmillLogDebug(@"CSJ", @"%s", __func__);
+    
 }
 @end
