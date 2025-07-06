@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <WindMillSDK/WindMillSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToBidMentaBannerCustomAdapter : NSObject
+@interface ToBidMentaBannerCustomAdapter : NSObject <AWMCustomBannerAdapter>
 
 @end
 
