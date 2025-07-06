@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <WindMillSDK/WindMillSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ToBidMentaRewardedVideoCustomAdapter : NSObject
+@interface ToBidMentaRewardedVideoCustomAdapter : NSObject <AWMCustomRewardedVideoAdapter>
 
 @end
 
