@@ -16,4 +16,6 @@
 - (instancetype)initWithNativeAd:(MentaNativeObject *)nativeAd
                           adView:(UIView<MentaNativeAdViewProtocol> *)adView;
 
+- (instancetype)initWithExpressAdView:(UIView *)adView;
+
 @end

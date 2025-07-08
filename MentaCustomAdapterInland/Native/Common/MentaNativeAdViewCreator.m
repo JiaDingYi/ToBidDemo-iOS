@@ -13,6 +13,7 @@
 @interface MentaNativeAdViewCreator()
 @property (nonatomic, strong) MentaNativeObject *nativeAd;
 @property (nonatomic, strong) UIView<MentaNativeAdViewProtocol> *nativeView;
+@property (nonatomic, strong) UIView *expressAdView;
 @property (nonatomic, strong) UIImage *image;
 
 @end
@@ -32,6 +33,14 @@
     if (self) {
         _nativeView = adView;
         _nativeAd = nativeAd;
+    }
+    return self;
+}
+
+- (instancetype)initWithExpressAdView:(UIView *)adView {
+    self = [super init];
+    if (self) {
+        _expressAdView = adView;
     }
     return self;
 }
