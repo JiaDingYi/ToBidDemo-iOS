@@ -44,6 +44,11 @@ target 'WindmillSample' do
       'QuMengAdapter'
   ]
   pod 'ToBidMentaCustomAdapter', :path => '../'
+
+#  pod 'MentaUnifiedSDK',     :path => '/Users/jdy/Desktop/menta_inland/MentaUnifiedSDK.podspec'
+#  pod 'MentaVlionBaseSDK',   :path => '/Users/jdy/Desktop/menta_inland/MentaVlionBaseSDK.podspec'
+#  pod 'MentaVlionSDK',       :path => '/Users/jdy/Desktop/menta_inland/MentaVlionSDK.podspec'
+#  pod 'MentaVlionAdapter',   :path => '/Users/jdy/Desktop/menta_inland/MentaVlionAdapter.podspec'
 end
 
 post_install do |installer|

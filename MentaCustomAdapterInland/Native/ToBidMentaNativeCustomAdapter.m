@@ -59,14 +59,16 @@
  */
 - (void)menta_nativeAdLoaded:(NSArray<MentaNativeObject *> * _Nullable)unifiedNativeAdDataObjects nativeAd:(MentaUnifiedNativeAd *_Nullable)nativeAd {
     self.nativeObj = unifiedNativeAdDataObjects.firstObject;
+    NSLog(@"%@", self.nativeObj.nativeAdView);
     NSString *price = [self.nativeObj.dataObject.price stringValue];
     [self.bridge nativeAd:self didAdServerResponseWithExt:@{
         AWMMediaAdLoadingExtECPM: price
     }];
     AWMMediatedNativeAd *mNativeAd = [[AWMMediatedNativeAd alloc] init];
     mNativeAd.data = [[MentaNativeAdData alloc] initWithAd:self.nativeObj];
-    mNativeAd.originMediatedNativeAd = self.nativeObj;
     mNativeAd.viewCreator = [[MentaNativeAdViewCreator alloc] initWithNativeAd:self.nativeObj adView:self.nativeObj.nativeAdView];
+    mNativeAd.view = self.nativeObj.nativeAdView;
+    mNativeAd.originMediatedNativeAd = self.nativeObj.nativeAdView;
     [self.bridge nativeAd:self didLoadWithNativeAds:@[mNativeAd]];
 }
 
