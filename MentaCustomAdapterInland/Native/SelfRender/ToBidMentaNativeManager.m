@@ -108,7 +108,7 @@
  @param adView 广告View
  */
 - (void)menta_nativeAdViewWillExpose:(MentaUnifiedNativeAd *_Nullable)nativeAd adView:(UIView<MentaNativeAdViewProtocol> *_Nonnull)adView {
-    [self.bridge nativeAd:self.adapter didVisibleWithMediatedNativeAd:nativeAd];
+    [self.bridge nativeAd:self.adapter didVisibleWithMediatedNativeAd:adView];
 }
 
 
@@ -118,7 +118,7 @@
  @param nativeAd MentaUnifiedNativeAd 实例,
  */
 - (void)menta_nativeAdViewDidClick:(MentaUnifiedNativeAd *_Nullable)nativeAd adView:(UIView<MentaNativeAdViewProtocol> *_Nullable)adView {
-    [self.bridge nativeAd:self.adapter didClickWithMediatedNativeAd:nativeAd];
+    [self.bridge nativeAd:self.adapter didClickWithMediatedNativeAd:adView];
 }
 
 /**
@@ -127,7 +127,7 @@
  @param nativeAd MentaUnifiedNativeAd 实例,
  */
 - (void)menta_nativeAdDidClose:(MentaUnifiedNativeAd *_Nonnull)nativeAd adView:(UIView<MentaNativeAdViewProtocol> *_Nullable)adView {
-    [self.bridge nativeAd:self.adapter didClose:nativeAd closeReasons:nil];
+    [self.bridge nativeAd:self.adapter didClose:adView closeReasons:nil];
 }
 
 
