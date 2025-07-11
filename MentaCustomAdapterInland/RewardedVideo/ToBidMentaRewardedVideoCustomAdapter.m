@@ -53,6 +53,7 @@
 /// @param parameter 展示广告的参数，由ToBid接入媒体配置
 - (BOOL)showAdFromRootViewController:(UIViewController *)viewController parameter:(AWMParameter *)parameter {
     [self.rewardedVideo showAdFromRootViewController:viewController];
+    return YES;
 }
 
 #pragma mark - MentaUnifiedRewardVideoDelegate
