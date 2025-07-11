@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
     s.homepage         = 'https://www.mentamob.com/'
     s.license          = "Custom"
     s.author           = { 'wzy' => 'wangzeyong@mentamob.com' }
-    s.source           = { :git => "https://github.com/JiaDingYi.git", :tag => "#{s.version}" }
+    s.source           = { :git => "git@github.com:JiaDingYi/ToBidDemo-iOS.git", :tag => "#{s.version}" }
   
     s.ios.deployment_target = '11.0'
     s.frameworks = 'UIKit', 'MapKit', 'MediaPlayer', 'CoreLocation', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate','AudioToolbox','JavaScriptCore','Security','CoreImage','AudioToolbox','ImageIO','QuartzCore','CoreGraphics','CoreText'
