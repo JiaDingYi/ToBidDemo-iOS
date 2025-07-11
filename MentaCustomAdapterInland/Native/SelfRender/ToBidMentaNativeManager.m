@@ -63,7 +63,7 @@
 }
 
 - (BOOL)showAdFromRootViewController:(UIViewController *)viewController parameter:(AWMParameter *)parameter {
-    
+    return true;
 }
 
 - (void)didReceiveBidResult:(AWMMediaBidResult *)result {
