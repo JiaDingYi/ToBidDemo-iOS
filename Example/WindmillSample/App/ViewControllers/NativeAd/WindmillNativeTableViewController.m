@@ -63,14 +63,14 @@
 - (void)pbud_insertIntoDataSourceWithArray:(NSArray *)array {
     if (self.refreshState == 2) {
         [self.dataSource addObjectsFromArray:array];
-    }else {
-        if (self.dataSource.count > 3) {
-            //随机
-            for (id item in array) {
-                NSUInteger index = rand() % (self.dataSource.count - 3) + 2;
-                [self.dataSource insertObject:item atIndex:index];
-            }
-        }
+//    }else {
+//        if (self.dataSource.count > 3) {
+//            //随机
+//            for (id item in array) {
+//                NSUInteger index = rand() % (self.dataSource.count - 3) + 2;
+//                [self.dataSource insertObject:item atIndex:index];
+//            }
+//        }
     }
 }
 
