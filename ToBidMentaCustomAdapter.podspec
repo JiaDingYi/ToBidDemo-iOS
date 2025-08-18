@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
     s.name             = 'ToBidMentaCustomAdapter'
-    s.version          = '6.00.38'
+    s.version          = '6.00.38.1'
     s.summary          = 'ToBidMentaCustomAdapter.'
     s.description      = 'This is the ToBidMentaCustomAdapter. Please proceed to https://www.mentamob.com for more information.'
     s.homepage         = 'https://www.mentamob.com/'
     s.license          = "Custom"
     s.author           = { 'wzy' => 'wangzeyong@mentamob.com' }
-    s.source           = { :git => "git@github.com:JiaDingYi/ToBidDemo-iOS.git", :tag => "#{s.version}" }
+    s.source           = { :git => "https://github.com/JiaDingYi/ToBidDemo-iOS.git", :tag => "#{s.version}" }
   
     s.ios.deployment_target = '11.0'
     s.frameworks = 'UIKit', 'MapKit', 'MediaPlayer', 'CoreLocation', 'AdSupport', 'CoreMedia', 'AVFoundation', 'CoreTelephony', 'StoreKit', 'SystemConfiguration', 'MobileCoreServices', 'CoreMotion', 'Accelerate','AudioToolbox','JavaScriptCore','Security','CoreImage','AudioToolbox','ImageIO','QuartzCore','CoreGraphics','CoreText'
