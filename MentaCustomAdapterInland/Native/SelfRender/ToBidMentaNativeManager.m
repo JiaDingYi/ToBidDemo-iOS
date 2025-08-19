@@ -85,7 +85,7 @@
     self.nativeObj = unifiedNativeAdDataObjects.firstObject;
     NSLog(@"%@", self.nativeObj.nativeAdView);
     NSString *price = [self.nativeObj.dataObject.price stringValue];
-    [self.bridge nativeAd:self didAdServerResponseWithExt:@{
+    [self.bridge nativeAd:self.adapter didAdServerResponseWithExt:@{
         AWMMediaAdLoadingExtECPM: price
     }];
     AWMMediatedNativeAd *mNativeAd = [[AWMMediatedNativeAd alloc] init];
