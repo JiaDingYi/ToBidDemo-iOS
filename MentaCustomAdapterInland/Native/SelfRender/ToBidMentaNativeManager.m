@@ -18,6 +18,7 @@
 @property (nonatomic, weak) id<AWMCustomNativeAdapter> adapter;
 @property (nonatomic, strong) MentaUnifiedNativeAd *nativeAd;
 @property (nonatomic, strong) MentaNativeObject *nativeObj;
+@property (nonatomic, assign) NSInteger networkID;
 
 @end
 
@@ -49,6 +50,7 @@
 - (void)loadAdWithPlacementId:(NSString *)placementId
                        adSize:(CGSize)size
                     parameter:(AWMParameter *)parameter {
+    self.networkID = [parameter.extra[@"adn_id"] intValue];
     MUNativeConfig *config = [MUNativeConfig new];
     config.slotId = placementId;
 //    config.viewController = self;
@@ -90,6 +92,7 @@
     }];
     AWMMediatedNativeAd *mNativeAd = [[AWMMediatedNativeAd alloc] init];
     mNativeAd.data = [[MentaNativeAdData alloc] initWithAd:self.nativeObj];
+    mNativeAd.data.networkId = self.networkID;
     mNativeAd.viewCreator = [[MentaNativeAdViewCreator alloc] initWithNativeAd:self.nativeObj adView:self.nativeObj.nativeAdView];
     mNativeAd.view = self.nativeObj.nativeAdView;
     mNativeAd.originMediatedNativeAd = self.nativeObj.nativeAdView;
