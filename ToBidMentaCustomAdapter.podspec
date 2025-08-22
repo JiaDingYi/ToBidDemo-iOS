@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'ToBidMentaCustomAdapter'
-    s.version          = '6.00.39'
+    s.version          = '6.00.39.1'
     s.summary          = 'ToBidMentaCustomAdapter.'
     s.description      = 'This is the ToBidMentaCustomAdapter. Please proceed to https://www.mentamob.com for more information.'
     s.homepage         = 'https://www.mentamob.com/'
