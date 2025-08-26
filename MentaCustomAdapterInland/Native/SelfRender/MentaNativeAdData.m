@@ -69,10 +69,6 @@
     return @[];
 }
 
-- (WindMillAdn)networkId {
-    return WindMillAdnCustom;
-}
-
 - (AWMNativeAdSlotAdType)adType {
     return AWMNativeAdSlotAdTypeFeed;
 }

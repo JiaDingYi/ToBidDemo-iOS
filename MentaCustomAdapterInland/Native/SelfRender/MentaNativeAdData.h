@@ -13,6 +13,8 @@
 
 @interface MentaNativeAdData : NSObject <AWMMediatedNativeAdData>
 
+@property (nonatomic, assign) NSInteger networkId;
+
 - (instancetype)initWithAd:(MentaNativeObject *)ad;
 
 @end
