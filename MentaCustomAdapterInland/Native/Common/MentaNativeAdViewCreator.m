@@ -62,7 +62,12 @@
 
 #pragma mark - Getter
 - (UIView *)adLogoView {
-    return nil;
+    if (!_adLogoView) {
+        UIImage *logo = _nativeAd.dataObject.adIcon;
+        _adLogoView = [[UIImageView alloc] initWithImage:logo];
+        _adLogoView.frame = CGRectMake(0, 0, logo.size.width, logo.size.height);
+    }
+    return _adLogoView;
 }
 - (UIButton *)dislikeBtn {
     return nil;
